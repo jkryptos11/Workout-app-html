@@ -7,6 +7,40 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <title>Jainik's Grind</title>
+
+<!-- PWA Manifest (inline) -->
+<script>
+const manifestData = {
+  name: "Jainik's Grind",
+  short_name: "Grind",
+  description: "Personal workout tracker",
+  start_url: "./",
+  display: "standalone",
+  orientation: "portrait",
+  background_color: "#080b12",
+  theme_color: "#080b12",
+  icons: [
+    {
+      src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='32' fill='%23080b12'/%3E%3Crect x='10' y='76' width='28' height='40' rx='8' fill='url(%23g)'/%3E%3Crect x='38' y='56' width='20' height='80' rx='7' fill='url(%23g)'/%3E%3Crect x='58' y='84' width='76' height='24' rx='8' fill='url(%23g2)'/%3E%3Crect x='134' y='56' width='20' height='80' rx='7' fill='url(%23g)'/%3E%3Crect x='154' y='76' width='28' height='40' rx='8' fill='url(%23g)'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='192' y2='192' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2300d4ff'/%3E%3Cstop offset='1' stop-color='%2300e5a0'/%3E%3C/linearGradient%3E%3ClinearGradient id='g2' x1='0' y1='0' x2='192' y2='0' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2300d4ff' stop-opacity='0.5'/%3E%3Cstop offset='1' stop-color='%2300e5a0' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E",
+      sizes: "192x192",
+      type: "image/svg+xml",
+      purpose: "any maskable"
+    },
+    {
+      src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='80' fill='%23080b12'/%3E%3Crect x='24' y='196' width='80' height='120' rx='20' fill='url(%23g)'/%3E%3Crect x='104' y='144' width='56' height='224' rx='18' fill='url(%23g)'/%3E%3Crect x='160' y='216' width='192' height='80' rx='20' fill='url(%23g2)'/%3E%3Crect x='352' y='144' width='56' height='224' rx='18' fill='url(%23g)'/%3E%3Crect x='408' y='196' width='80' height='120' rx='20' fill='url(%23g)'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='512' y2='512' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2300d4ff'/%3E%3Cstop offset='1' stop-color='%2300e5a0'/%3E%3C/linearGradient%3E%3ClinearGradient id='g2' x1='0' y1='0' x2='512' y2='0' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2300d4ff' stop-opacity='0.5'/%3E%3Cstop offset='1' stop-color='%2300e5a0' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E",
+      sizes: "512x512",
+      type: "image/svg+xml",
+      purpose: "any maskable"
+    }
+  ]
+};
+const blob = new Blob([JSON.stringify(manifestData)], {type: 'application/json'});
+const manifestURL = URL.createObjectURL(blob);
+const link = document.createElement('link');
+link.rel = 'manifest';
+link.href = manifestURL;
+document.head.appendChild(link);
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -1254,6 +1288,18 @@ function init() {
 }
 
 init();
+
+// ══════════════ PWA SERVICE WORKER ══════════════
+if ('serviceWorker' in navigator) {
+  const swCode = `
+    self.addEventListener('install', e => self.skipWaiting());
+    self.addEventListener('activate', e => self.clients.claim());
+    self.addEventListener('fetch', e => e.respondWith(fetch(e.request).catch(() => caches.match(e.request))));
+  `;
+  const swBlob = new Blob([swCode], {type: 'application/javascript'});
+  const swURL = URL.createObjectURL(swBlob);
+  navigator.serviceWorker.register(swURL, {scope: '/'}).catch(() => {});
+}
 </script>
 </body>
 </html>
