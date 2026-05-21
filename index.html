@@ -3,73 +3,80 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="theme-color" content="#080b12">
+<meta name="theme-color" content="#F7F5FF">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <title>Jainik's Grind</title>
 
-<!-- PWA Manifest (inline) -->
 <script>
 const manifestData = {
-  name: "Jainik's Grind",
-  short_name: "Grind",
+  name: "Jainik's Grind", short_name: "Grind",
   description: "Personal workout tracker",
-  start_url: "./",
-  display: "standalone",
-  orientation: "portrait",
-  background_color: "#080b12",
-  theme_color: "#080b12",
-  icons: [
-    {
-      src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='32' fill='%23080b12'/%3E%3Crect x='10' y='76' width='28' height='40' rx='8' fill='url(%23g)'/%3E%3Crect x='38' y='56' width='20' height='80' rx='7' fill='url(%23g)'/%3E%3Crect x='58' y='84' width='76' height='24' rx='8' fill='url(%23g2)'/%3E%3Crect x='134' y='56' width='20' height='80' rx='7' fill='url(%23g)'/%3E%3Crect x='154' y='76' width='28' height='40' rx='8' fill='url(%23g)'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='192' y2='192' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2300d4ff'/%3E%3Cstop offset='1' stop-color='%2300e5a0'/%3E%3C/linearGradient%3E%3ClinearGradient id='g2' x1='0' y1='0' x2='192' y2='0' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2300d4ff' stop-opacity='0.5'/%3E%3Cstop offset='1' stop-color='%2300e5a0' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E",
-      sizes: "192x192",
-      type: "image/svg+xml",
-      purpose: "any maskable"
-    },
-    {
-      src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='80' fill='%23080b12'/%3E%3Crect x='24' y='196' width='80' height='120' rx='20' fill='url(%23g)'/%3E%3Crect x='104' y='144' width='56' height='224' rx='18' fill='url(%23g)'/%3E%3Crect x='160' y='216' width='192' height='80' rx='20' fill='url(%23g2)'/%3E%3Crect x='352' y='144' width='56' height='224' rx='18' fill='url(%23g)'/%3E%3Crect x='408' y='196' width='80' height='120' rx='20' fill='url(%23g)'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='512' y2='512' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2300d4ff'/%3E%3Cstop offset='1' stop-color='%2300e5a0'/%3E%3C/linearGradient%3E%3ClinearGradient id='g2' x1='0' y1='0' x2='512' y2='0' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2300d4ff' stop-opacity='0.5'/%3E%3Cstop offset='1' stop-color='%2300e5a0' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E",
-      sizes: "512x512",
-      type: "image/svg+xml",
-      purpose: "any maskable"
-    }
-  ]
+  start_url: "./", display: "standalone", orientation: "portrait",
+  background_color: "#F7F5FF", theme_color: "#4B3596",
+  icons: [{
+    src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='36' fill='%234B3596'/%3E%3Crect x='10' y='76' width='28' height='40' rx='8' fill='white'/%3E%3Crect x='38' y='56' width='20' height='80' rx='7' fill='white'/%3E%3Crect x='58' y='84' width='76' height='24' rx='8' fill='white' opacity='0.6'/%3E%3Crect x='134' y='56' width='20' height='80' rx='7' fill='white'/%3E%3Crect x='154' y='76' width='28' height='40' rx='8' fill='white'/%3E%3C/svg%3E",
+    sizes: "192x192", type: "image/svg+xml", purpose: "any maskable"
+  }]
 };
-const blob = new Blob([JSON.stringify(manifestData)], {type: 'application/json'});
-const manifestURL = URL.createObjectURL(blob);
+const blob = new Blob([JSON.stringify(manifestData)], {type:'application/json'});
 const link = document.createElement('link');
-link.rel = 'manifest';
-link.href = manifestURL;
+link.rel = 'manifest'; link.href = URL.createObjectURL(blob);
 document.head.appendChild(link);
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
+/* ═══════════════════════════════════════════
+   COLOUR SYSTEM — Light Theme
+   Original palette used correctly:
+   #4B3596 Purple  — 9.3:1 on white  ✅ text/icons/accents
+   #287596 Teal    — 5.1:1 on white  ✅ text/icons/accents
+   #77E9E6 Aqua    — 1.4:1 on white  ❌ decoration/fills ONLY, dark text on top
+   #AD6D15 Amber   — 4.2:1 on white  ✅ large text / bold labels only
+   #79380B Rust    — 8.8:1 on white  ✅ text/icons/accents
+   #AC1A4C Crimson — 7.0:1 on white  ✅ text/icons/accents
+   ═══════════════════════════════════════════ */
 :root {
-  --bg: #080b12;
-  --bg2: #0d1120;
-  --surface: #111827;
-  --surface2: #1a2235;
-  --surface3: #212d42;
-  --border: #1e2d45;
-  --border2: #263548;
-  --cyan: #00d4ff;
-  --cyan-dim: #00a8cc;
-  --orange: #ff6b2b;
-  --orange-dim: #cc5522;
-  --green: #00e5a0;
-  --green-dim: #00b87d;
-  --text: #e8edf5;
-  --text2: #8fa3be;
-  --text3: #4a6080;
-  --warmup: #a78bfa;
-  --warmup-dim: #7c5cc4;
-  --radius: 16px;
-  --radius-sm: 10px;
+  --bg:         #F7F5FF;
+  --bg2:        #EEEAFF;
+  --surface:    #FFFFFF;
+  --surface2:   #F2F0FC;
+  --surface3:   #EAE6FA;
+  --border:     #DDD8F5;
+  --border2:    #CBC4EE;
+
+  --purple:     #4B3596;
+  --teal:       #287596;
+  --aqua:       #77E9E6;   /* decoration fills only */
+  --aqua-text:  #1a5a58;   /* dark teal for text on aqua bg */
+  --amber:      #AD6D15;
+  --rust:       #79380B;
+  --crimson:    #AC1A4C;
+
+  /* Card accent fills (light tints) */
+  --purple-tint:  #EDE9FF;
+  --teal-tint:    #E3F4FA;
+  --amber-tint:   #FDF0DC;
+  --rust-tint:    #FAEDE6;
+  --crimson-tint: #FDEAF0;
+  --aqua-tint:    #E2FFFE;
+
+  --text:       #1C1535;
+  --text2:      #4A4270;
+  --text3:      #8880AA;
+
+  --radius:     16px;
+  --radius-sm:  10px;
+  --shadow:     0 2px 12px rgba(75,53,150,0.08);
+  --shadow-md:  0 4px 20px rgba(75,53,150,0.12);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Rubik', sans-serif;
   background: var(--bg);
   color: var(--text);
   min-height: 100dvh;
@@ -80,106 +87,129 @@ body {
 /* ── HEADER ── */
 .header {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(8,11,18,0.92);
+  background: rgba(247,245,255,0.95);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
-  padding: 14px 18px;
+  padding: 13px 18px;
   display: flex; align-items: center; justify-content: space-between;
 }
 .logo-wrap { display: flex; align-items: center; gap: 10px; }
-.logo-icon { width: 34px; height: 34px; flex-shrink: 0; }
-.logo-text { display: flex; flex-direction: column; line-height: 1; }
+.logo-icon { width: 32px; height: 32px; flex-shrink: 0; }
 .logo-name {
-  font-family: 'Rajdhani', sans-serif;
-  font-weight: 700; font-size: 18px; letter-spacing: 1px;
-  background: linear-gradient(135deg, var(--cyan), var(--orange));
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800; font-size: 17px; letter-spacing: 0.3px;
+  color: var(--purple);
 }
-.logo-sub { font-size: 9px; color: var(--text3); letter-spacing: 3px; text-transform: uppercase; margin-top: 1px; }
-.header-date { font-size: 11px; color: var(--text3); letter-spacing: 0.5px; }
+.logo-sub { font-size: 9px; color: var(--text3); letter-spacing: 2.5px; text-transform: uppercase; margin-top: 1px; }
+.header-date { font-size: 11px; color: var(--text3); }
 
-/* ── PAGES ── */
+/* ── PAGE SYSTEM ── */
 .page { display: none; }
 .page.active { display: block; }
 
-/* ── HOME PAGE: DAY CARDS ── */
-.home-top { padding: 18px 16px 10px; }
+/* ── HOME PAGE ── */
+.home-top { padding: 18px 16px 8px; }
 .home-greeting {
-  font-family: 'Rajdhani', sans-serif;
-  font-weight: 700; font-size: 26px; letter-spacing: 0.5px; color: var(--text);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800; font-size: 26px; color: var(--text);
 }
-.home-greeting span { color: var(--cyan); }
-.home-sub { font-size: 13px; color: var(--text2); margin-top: 3px; }
+.home-greeting span { color: var(--purple); }
+.home-sub { font-size: 13px; color: var(--text3); margin-top: 3px; }
 
-.day-cards { padding: 8px 16px; display: flex; flex-direction: column; gap: 14px; }
+.day-cards { padding: 8px 16px 0; display: flex; flex-direction: column; gap: 12px; }
 
 .day-card {
   border-radius: var(--radius);
   overflow: hidden;
-  border: 1px solid var(--border2);
+  border: 1px solid var(--border);
   cursor: pointer;
   position: relative;
+  box-shadow: var(--shadow);
   transition: transform 0.18s ease, box-shadow 0.18s ease;
-  background: var(--surface);
-  min-height: 140px;
+  min-height: 128px;
   display: flex; flex-direction: column; justify-content: flex-end;
 }
-.day-card:active { transform: scale(0.98); }
+.day-card:active { transform: scale(0.98); box-shadow: none; }
 
-.day-card-bg {
-  position: absolute; inset: 0;
-  overflow: hidden;
-}
-.day-card-bg svg { width: 100%; height: 100%; object-fit: cover; }
+/* Card colour theming */
+.card-d1 { background: linear-gradient(135deg, var(--purple-tint) 0%, #d8d0ff 100%); border-color: #c8bff0; }
+.card-d2 { background: linear-gradient(135deg, var(--teal-tint) 0%, #b8e8f5 100%); border-color: #9dd4e8; }
+.card-d3 { background: linear-gradient(135deg, var(--rust-tint) 0%, #f5d4c0 100%); border-color: #e8b89a; }
+.card-d4 { background: linear-gradient(135deg, var(--crimson-tint) 0%, #f5c8d8 100%); border-color: #e8a8c0; }
 
-/* gradient overlay */
-.day-card-overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(120deg, rgba(8,11,18,0.92) 40%, rgba(8,11,18,0.4) 100%);
-}
-
-.day-card-content {
-  position: relative; z-index: 2;
-  padding: 16px 18px;
-}
-.day-card-badge {
+.card-content { position: relative; z-index: 2; padding: 14px 16px 14px; }
+.card-badge {
   display: inline-flex; align-items: center;
-  font-family: 'Rajdhani', sans-serif;
-  font-weight: 700; font-size: 11px; letter-spacing: 3px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700; font-size: 10px; letter-spacing: 2.5px;
   text-transform: uppercase; padding: 3px 10px;
-  border-radius: 999px; margin-bottom: 7px;
+  border-radius: 999px; margin-bottom: 6px;
 }
-.day-card-title {
-  font-family: 'Rajdhani', sans-serif;
-  font-weight: 700; font-size: 22px; letter-spacing: 0.5px; color: var(--text);
-  line-height: 1.1; margin-bottom: 4px;
-}
-.day-card-desc { font-size: 12px; color: #a0b8d0; letter-spacing: 0.3px; }
-.day-card-meta {
-  display: flex; align-items: center; gap: 12px; margin-top: 9px;
-}
-.day-card-stat {
-  font-size: 11px; color: var(--text3);
-  display: flex; align-items: center; gap: 4px;
-}
-.day-card-stat span { color: var(--text2); font-weight: 500; }
-.day-card-arrow {
-  position: absolute; right: 16px; bottom: 16px; z-index: 2;
-  width: 32px; height: 32px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 14px; border: 1px solid;
-}
+.card-d1 .card-badge { background: rgba(75,53,150,0.12); color: var(--purple); }
+.card-d2 .card-badge { background: rgba(40,117,150,0.12); color: var(--teal); }
+.card-d3 .card-badge { background: rgba(121,56,11,0.12); color: var(--rust); }
+.card-d4 .card-badge { background: rgba(172,26,76,0.12); color: var(--crimson); }
 
-/* card accent colours */
-.card-cyan .day-card-badge { background: rgba(0,212,255,0.12); color: var(--cyan); border: 1px solid rgba(0,212,255,0.2); }
-.card-cyan .day-card-arrow { background: rgba(0,212,255,0.12); border-color: rgba(0,212,255,0.3); color: var(--cyan); }
-.card-orange .day-card-badge { background: rgba(255,107,43,0.12); color: var(--orange); border: 1px solid rgba(255,107,43,0.2); }
-.card-orange .day-card-arrow { background: rgba(255,107,43,0.12); border-color: rgba(255,107,43,0.3); color: var(--orange); }
-.card-green .day-card-badge { background: rgba(0,229,160,0.12); color: var(--green); border: 1px solid rgba(0,229,160,0.2); }
-.card-green .day-card-arrow { background: rgba(0,229,160,0.12); border-color: rgba(0,229,160,0.3); color: var(--green); }
-.card-purple .day-card-badge { background: rgba(167,139,250,0.12); color: var(--warmup); border: 1px solid rgba(167,139,250,0.2); }
-.card-purple .day-card-arrow { background: rgba(167,139,250,0.12); border-color: rgba(167,139,250,0.3); color: var(--warmup); }
+.card-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800; font-size: 18px; line-height: 1.2;
+  color: var(--text); margin-bottom: 6px;
+}
+.card-meta { display: flex; gap: 12px; }
+.card-stat { font-size: 11px; color: var(--text3); display: flex; align-items: center; gap: 4px; }
+.card-stat strong { font-weight: 600; }
+.card-d1 .card-stat strong { color: var(--purple); }
+.card-d2 .card-stat strong { color: var(--teal); }
+.card-d3 .card-stat strong { color: var(--rust); }
+.card-d4 .card-stat strong { color: var(--crimson); }
+
+.card-arrow {
+  position: absolute; right: 14px; top: 50%; transform: translateY(-50%); z-index: 2;
+  width: 30px; height: 30px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  border: 1.5px solid;
+}
+.card-d1 .card-arrow { background: rgba(75,53,150,0.1); border-color: rgba(75,53,150,0.25); }
+.card-d2 .card-arrow { background: rgba(40,117,150,0.1); border-color: rgba(40,117,150,0.25); }
+.card-d3 .card-arrow { background: rgba(121,56,11,0.1); border-color: rgba(121,56,11,0.25); }
+.card-d4 .card-arrow { background: rgba(172,26,76,0.1); border-color: rgba(172,26,76,0.25); }
+
+/* muscle SVG illustration */
+.card-illustration {
+  position: absolute; right: 44px; top: 0; bottom: 0;
+  width: 110px; pointer-events: none; z-index: 1; opacity: 0.45;
+  display: flex; align-items: center;
+}
+.card-illustration svg { width: 100%; height: 100%; }
+
+/* ── MOBILITY CARD ── */
+.mobility-section { padding: 12px 16px 0; }
+.mobility-card {
+  background: linear-gradient(135deg, var(--aqua-tint) 0%, #c8f8f7 100%);
+  border: 1px solid rgba(119,233,230,0.5);
+  border-radius: var(--radius); padding: 16px;
+  cursor: pointer; position: relative; overflow: hidden;
+  box-shadow: var(--shadow); transition: transform 0.18s;
+}
+.mobility-card:active { transform: scale(0.98); }
+.mobility-card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+.mobility-card-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800; font-size: 17px; color: var(--aqua-text);
+}
+.mobility-card-sub { font-size: 11px; color: #2a7a78; margin-bottom: 11px; }
+.mob-pills { display: flex; gap: 6px; flex-wrap: wrap; }
+.mob-pill {
+  background: rgba(40,117,100,0.1); border: 1px solid rgba(40,117,100,0.2);
+  color: var(--aqua-text); font-size: 10px; font-weight: 500;
+  padding: 4px 10px; border-radius: 999px; font-family: 'Rubik', sans-serif;
+}
+.mobility-arrow {
+  position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
+  width: 28px; height: 28px; border-radius: 50%;
+  background: rgba(40,117,100,0.1); border: 1.5px solid rgba(40,117,100,0.2);
+  display: flex; align-items: center; justify-content: center;
+}
 
 /* ── WORKOUT PAGE ── */
 .workout-header {
@@ -188,333 +218,389 @@ body {
 }
 .back-btn {
   background: var(--surface); border: 1px solid var(--border2);
-  color: var(--text2); font-size: 18px;
-  width: 36px; height: 36px; border-radius: 10px;
-  display: flex; align-items: center; justify-content: center; cursor: pointer;
-  flex-shrink: 0;
+  color: var(--text2); width: 36px; height: 36px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; flex-shrink: 0; box-shadow: var(--shadow);
+  font-size: 18px;
 }
 .workout-title-wrap { flex: 1; }
-.workout-day-label { font-size: 10px; color: var(--text3); letter-spacing: 3px; text-transform: uppercase; }
+.workout-day-label { font-size: 10px; color: var(--text3); letter-spacing: 2.5px; text-transform: uppercase; }
 .workout-day-title {
-  font-family: 'Rajdhani', sans-serif;
-  font-weight: 700; font-size: 22px; letter-spacing: 0.5px; color: var(--text); line-height: 1.1;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800; font-size: 21px; color: var(--text); line-height: 1.1;
 }
-.workout-day-focus { font-size: 12px; margin-top: 1px; }
+.workout-day-focus { font-size: 12px; margin-top: 1px; font-weight: 500; }
 
-/* progress */
+/* Progress bar */
 .progress-wrap { padding: 4px 16px 12px; }
 .progress-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 7px; }
 .progress-label {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 13px; font-weight: 600; letter-spacing: 1px; color: var(--text3); text-transform: uppercase;
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px; font-weight: 700; letter-spacing: 1.5px; color: var(--text3); text-transform: uppercase;
 }
-.progress-label span { color: var(--cyan); }
+.progress-label span { color: var(--purple); }
 .reset-btn {
-  background: var(--surface2); border: 1px solid var(--border);
-  color: var(--text3); font-family: 'Rajdhani', sans-serif;
-  font-weight: 600; font-size: 11px; letter-spacing: 2px;
-  text-transform: uppercase; padding: 5px 12px; border-radius: 7px; cursor: pointer;
+  background: var(--surface); border: 1px solid var(--border2); color: var(--text3);
+  font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 11px;
+  letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 12px;
+  border-radius: 7px; cursor: pointer;
 }
-.progress-bar-bg { background: var(--surface2); border-radius: 999px; height: 4px; overflow: hidden; }
-.progress-bar-fill { height: 100%; background: linear-gradient(90deg, var(--cyan), var(--green)); border-radius: 999px; transition: width 0.4s ease; }
+.progress-bar-bg { background: var(--surface3); border-radius: 999px; height: 5px; overflow: hidden; border: 1px solid var(--border); }
+.progress-bar-fill { height: 100%; border-radius: 999px; transition: width 0.4s ease; }
 
-/* section labels */
+/* Section labels */
 .section-label {
-  font-family: 'Rajdhani', sans-serif; font-weight: 600;
-  font-size: 11px; letter-spacing: 3px;
-  text-transform: uppercase; padding: 10px 16px 6px;
-  display: flex; align-items: center; gap: 8px;
+  font-family: 'Outfit', sans-serif; font-weight: 700;
+  font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+  padding: 10px 16px 6px; display: flex; align-items: center; gap: 8px;
 }
-.section-label.warmup { color: var(--warmup); }
-.section-label.main { color: var(--cyan); }
+.section-label.warmup { color: var(--amber); }
+.section-label.main   { color: var(--purple); }
+.section-label.cool   { color: var(--teal); }
+.section-label.mob-section { color: var(--aqua-text); }
 .section-line { flex: 1; height: 1px; background: var(--border); }
 
-/* exercises */
-.exercises { padding: 0 16px; display: flex; flex-direction: column; gap: 9px; }
+/* Exercise cards */
+.exercises { padding: 0 16px; display: flex; flex-direction: column; gap: 8px; }
 
 .ex-card {
-  background: var(--surface); border: 1px solid var(--border2);
-  border-radius: var(--radius); overflow: hidden; transition: all 0.2s;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); overflow: hidden;
+  transition: all 0.2s; box-shadow: var(--shadow);
 }
-.ex-card.warmup-card { border-left: 3px solid var(--warmup-dim); }
-.ex-card.main-card { border-left: 3px solid var(--cyan-dim); }
-.ex-card.done { background: #0d1a10; border-color: #1a3a22; opacity: 0.65; }
-.ex-card.warmup-card.done { border-left-color: #5a3a9a; }
-.ex-card.main-card.done { border-left-color: #006680; }
+.ex-card.warmup-card { border-left: 3px solid var(--amber); }
+.ex-card.main-card   { border-left: 3px solid var(--purple); }
+.ex-card.cool-card   { border-left: 3px solid var(--teal); }
+.ex-card.mob-card    { border-left: 3px solid var(--aqua-text); }
 
-.ex-header { display: flex; align-items: center; gap: 10px; padding: 13px 14px; cursor: pointer; }
+.ex-card.done {
+  background: #f0faf0; border-color: #c8e8c8; opacity: 0.72;
+}
+.ex-card.done.warmup-card { border-left-color: #c8aa88; }
+.ex-card.done.main-card   { border-left-color: #a898d8; }
+.ex-card.done.cool-card   { border-left-color: #88c8d8; }
+
+.ex-header { display: flex; align-items: center; gap: 10px; padding: 12px 14px; cursor: pointer; }
 
 .ex-check {
-  width: 26px; height: 26px; border-radius: 50%;
+  width: 24px; height: 24px; border-radius: 50%;
   border: 2px solid var(--border2); flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
   cursor: pointer; background: none; transition: all 0.2s;
 }
-.ex-card.done .ex-check { background: #1a5a2a; border-color: #1a5a2a; }
-.warmup-card .ex-check { border-color: rgba(167,139,250,0.3); }
-.warmup-card.done .ex-check { background: #3a2a6a; border-color: #3a2a6a; }
-.checkmark { display: none; font-size: 12px; }
-.ex-card.done .checkmark { display: block; }
+.ex-card.done .ex-check { background: #2a7a2a; border-color: #2a7a2a; color: white; font-size: 12px; }
+.warmup-card .ex-check { border-color: rgba(173,109,21,0.4); }
+.main-card   .ex-check { border-color: rgba(75,53,150,0.35); }
+.cool-card   .ex-check { border-color: rgba(40,117,150,0.35); }
+.mob-card    .ex-check { border-color: rgba(26,90,88,0.35); }
 
 .ex-info { flex: 1; min-width: 0; }
 .ex-name {
-  font-family: 'Rajdhani', sans-serif; font-weight: 600;
-  font-size: 16px; letter-spacing: 0.3px; text-transform: uppercase; color: var(--text);
+  font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 14px;
+  text-transform: uppercase; letter-spacing: 0.3px; color: var(--text);
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 .ex-card.done .ex-name { text-decoration: line-through; color: var(--text3); }
-.ex-meta { font-size: 11px; color: var(--text3); margin-top: 2px; }
-.warmup-card .ex-meta { color: rgba(167,139,250,0.6); }
-.main-card .ex-meta { color: rgba(0,212,255,0.5); }
+.ex-meta-row { display: flex; align-items: center; gap: 6px; margin-top: 2px; }
+.ex-meta { font-size: 11px; color: var(--text3); }
+.warmup-card .ex-meta { color: rgba(173,109,21,0.75); }
+.main-card   .ex-meta { color: rgba(75,53,150,0.65); }
+.cool-card   .ex-meta { color: rgba(40,117,150,0.65); }
+.timed-badge {
+  font-size: 9px; font-weight: 600; letter-spacing: 0.5px;
+  background: rgba(75,53,150,0.08); color: var(--purple);
+  padding: 1px 6px; border-radius: 999px; border: 1px solid rgba(75,53,150,0.15);
+}
 
-.ex-actions { display: flex; align-items: center; gap: 7px; flex-shrink: 0; }
+.ex-actions { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
 .yt-btn {
-  background: rgba(255,68,68,0.1); border: 1px solid rgba(255,68,68,0.2);
-  color: #ff5555; font-size: 11px; width: 28px; height: 28px;
-  border-radius: 8px; display: flex; align-items: center; justify-content: center;
-  cursor: pointer; text-decoration: none; flex-shrink: 0; font-weight: 700;
+  background: rgba(172,26,76,0.08); border: 1px solid rgba(172,26,76,0.2);
+  color: var(--crimson); font-size: 10px; font-weight: 700;
+  width: 27px; height: 27px; border-radius: 7px;
+  display: flex; align-items: center; justify-content: center;
+  text-decoration: none; flex-shrink: 0;
 }
 .expand-icon { color: var(--text3); font-size: 14px; transition: transform 0.2s; }
 .ex-card.expanded .expand-icon { transform: rotate(180deg); }
 
-/* sets panel */
+/* Note footer */
+.ex-note {
+  padding: 0 14px 10px;
+  display: flex; align-items: flex-start; gap: 5px;
+}
+.ex-note-icon { font-size: 11px; flex-shrink: 0; margin-top: 1px; }
+.ex-note-text {
+  font-size: 11px; color: var(--text3); line-height: 1.45;
+  font-style: italic;
+}
+.warmup-card .ex-note-text { color: rgba(173,109,21,0.7); }
+.main-card   .ex-note-text { color: rgba(75,53,150,0.6); }
+.cool-card   .ex-note-text { color: rgba(40,117,150,0.6); }
+
+/* Sets panel */
 .sets-panel { display: none; padding: 0 14px 14px; border-top: 1px solid var(--border); }
 .ex-card.expanded .sets-panel { display: block; }
 
 .sets-label {
-  font-family: 'Rajdhani', sans-serif; font-size: 11px; font-weight: 600;
-  letter-spacing: 2px; color: var(--text3); text-transform: uppercase; padding: 10px 0 8px;
+  font-family: 'Outfit', sans-serif; font-size: 10px; font-weight: 700;
+  letter-spacing: 2px; color: var(--text3); text-transform: uppercase;
+  padding: 10px 0 8px;
 }
 .sets-grid { display: flex; gap: 7px; flex-wrap: wrap; }
-
 .set-item {
   background: var(--surface2); border: 1px solid var(--border);
-  border-radius: var(--radius-sm); padding: 10px 8px; text-align: center;
-  min-width: 68px; flex: 1; transition: all 0.2s;
+  border-radius: 9px; padding: 9px 8px; text-align: center;
+  min-width: 66px; flex: 1; transition: all 0.2s;
 }
-.set-item.completed { background: #0d2018; border-color: #1a4a2a; }
-
+.set-item.completed { background: #e8f8e8; border-color: #a8d8a8; }
 .set-num {
-  font-family: 'Rajdhani', sans-serif; font-size: 10px; font-weight: 600;
+  font-family: 'Outfit', sans-serif; font-size: 9px; font-weight: 700;
   color: var(--text3); text-transform: uppercase; letter-spacing: 1px;
 }
 .reps-input {
   width: 100%; background: none; border: none;
-  border-bottom: 1px solid var(--border2); color: var(--text);
-  font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 18px;
-  text-align: center; padding: 4px 0; margin: 5px 0; outline: none;
+  border-bottom: 1.5px solid var(--border2); color: var(--text);
+  font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 17px;
+  text-align: center; padding: 3px 0; margin: 5px 0; outline: none;
 }
-.reps-input:focus { border-color: var(--cyan); color: var(--cyan); }
-.set-item.completed .reps-input { color: var(--green); border-color: #1a4a2a; }
-
+.reps-input:focus { border-color: var(--purple); color: var(--purple); }
+.set-item.completed .reps-input { color: #2a7a2a; border-color: #a8d8a8; }
 .set-done-btn {
   background: var(--surface3); border: 1px solid var(--border2); color: var(--text3);
-  font-family: 'Rajdhani', sans-serif; font-weight: 600; font-size: 10px;
+  font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 9px;
   letter-spacing: 1px; text-transform: uppercase; padding: 5px 6px;
   border-radius: 6px; cursor: pointer; width: 100%; transition: all 0.15s;
 }
-.set-item.completed .set-done-btn { background: #1a3a22; border-color: #2a5a32; color: var(--green); }
+.set-item.completed .set-done-btn { background: #c8e8c8; border-color: #a8d8a8; color: #2a7a2a; }
 
-/* TIMER BUTTON */
+/* Timer */
 .timer-btn {
-  background: rgba(0,212,255,0.08); border: 1px solid rgba(0,212,255,0.2);
-  color: var(--cyan); font-family: 'Rajdhani', sans-serif;
+  display: inline-flex; align-items: center; gap: 5px;
+  background: rgba(75,53,150,0.07); border: 1px solid rgba(75,53,150,0.2);
+  color: var(--purple); font-family: 'Outfit', sans-serif;
   font-weight: 600; font-size: 11px; letter-spacing: 1px;
-  text-transform: uppercase; padding: 6px 10px; border-radius: 7px;
-  cursor: pointer; display: flex; align-items: center; gap: 5px; margin-top: 10px;
+  text-transform: uppercase; padding: 7px 12px; border-radius: 8px;
+  cursor: pointer; margin-top: 10px;
 }
-.warmup-card .timer-btn { background: rgba(167,139,250,0.08); border-color: rgba(167,139,250,0.2); color: var(--warmup); }
-.timer-btn.active { background: rgba(255,107,43,0.12); border-color: rgba(255,107,43,0.3); color: var(--orange); }
+.warmup-card .timer-btn { background: rgba(173,109,21,0.07); border-color: rgba(173,109,21,0.2); color: var(--amber); }
+.cool-card   .timer-btn { background: rgba(40,117,150,0.07); border-color: rgba(40,117,150,0.2); color: var(--teal); }
+.timer-btn.active { background: rgba(172,26,76,0.08); border-color: rgba(172,26,76,0.2); color: var(--crimson); }
 
-/* TIMER DISPLAY */
-.timer-display {
-  display: none;
-  background: var(--surface2); border: 1px solid var(--border2);
-  border-radius: var(--radius-sm); padding: 14px;
-  text-align: center; margin-top: 8px;
-}
+.timer-display { display: none; background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px; text-align: center; margin-top: 8px; }
 .timer-display.visible { display: block; }
 .timer-time {
-  font-family: 'Rajdhani', sans-serif; font-weight: 700;
-  font-size: 48px; letter-spacing: 2px; line-height: 1;
+  font-family: 'Outfit', sans-serif; font-weight: 800;
+  font-size: 46px; letter-spacing: 2px; line-height: 1; color: var(--purple);
 }
-.timer-time.running { color: var(--cyan); }
-.timer-time.done-t { color: var(--green); }
-.timer-time.warning { color: var(--orange); animation: pulse 0.6s ease infinite alternate; }
-@keyframes pulse { from { opacity: 1; } to { opacity: 0.5; } }
+.timer-time.warning { color: var(--crimson); animation: tpulse 0.6s ease infinite alternate; }
+.timer-time.done-t  { color: #2a7a2a; }
+@keyframes tpulse { from { opacity: 1; } to { opacity: 0.4; } }
+.timer-label { font-size: 10px; color: var(--text3); margin-top: 5px; letter-spacing: 1.5px; text-transform: uppercase; }
 .timer-controls { display: flex; gap: 8px; margin-top: 10px; justify-content: center; }
 .t-ctrl-btn {
-  font-family: 'Rajdhani', sans-serif; font-weight: 600;
-  font-size: 12px; letter-spacing: 1px; text-transform: uppercase;
-  padding: 8px 20px; border-radius: 8px; cursor: pointer; border: 1px solid;
+  font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 11px;
+  letter-spacing: 1px; text-transform: uppercase; padding: 8px 18px;
+  border-radius: 8px; cursor: pointer; border: 1px solid;
 }
-.t-start { background: rgba(0,212,255,0.12); border-color: rgba(0,212,255,0.3); color: var(--cyan); }
-.t-pause { background: rgba(255,107,43,0.12); border-color: rgba(255,107,43,0.3); color: var(--orange); }
+.t-start { background: rgba(75,53,150,0.08); border-color: rgba(75,53,150,0.25); color: var(--purple); }
+.t-pause { background: rgba(172,26,76,0.08); border-color: rgba(172,26,76,0.25); color: var(--crimson); }
 .t-reset { background: var(--surface3); border-color: var(--border2); color: var(--text3); }
-.timer-label { font-size: 11px; color: var(--text3); margin-top: 6px; letter-spacing: 1px; }
+.timer-sound-note { font-size: 10px; color: var(--text3); margin-top: 5px; }
 
-/* LOG BTN */
+/* Log button */
 .complete-wrap { padding: 14px 16px; }
 .complete-btn {
-  width: 100%; border: none; color: #080b12;
-  font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 17px;
+  width: 100%; border: none; color: #fff;
+  font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 16px;
   letter-spacing: 3px; text-transform: uppercase; padding: 17px;
   border-radius: var(--radius); cursor: pointer; transition: all 0.2s;
-  background: linear-gradient(135deg, var(--cyan), var(--green));
+  box-shadow: 0 4px 14px rgba(75,53,150,0.3);
 }
 .complete-btn:active { transform: scale(0.97); opacity: 0.9; }
 
-/* ── HISTORY PAGE ── */
-.page-top { padding: 16px 16px 6px; }
+/* ── PROGRESS / HISTORY PAGE ── */
+.page-top { padding: 16px 16px 6px; display: flex; align-items: center; justify-content: space-between; }
 .page-title {
-  font-family: 'Rajdhani', sans-serif; font-weight: 700;
-  font-size: 24px; letter-spacing: 1px; text-transform: uppercase; color: var(--text);
+  font-family: 'Outfit', sans-serif; font-weight: 800;
+  font-size: 23px; color: var(--text);
 }
 
-/* Calendar nav */
-.cal-nav { display: flex; align-items: center; gap: 0; margin: 12px 16px 0; }
+.cal-nav {
+  display: flex; background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 3px; margin: 8px 16px 0;
+  box-shadow: var(--shadow);
+}
 .cal-view-btn {
-  flex: 1; background: var(--surface); border: 1px solid var(--border2);
-  color: var(--text3); font-family: 'Rajdhani', sans-serif;
-  font-weight: 600; font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
-  padding: 9px 8px; cursor: pointer; transition: all 0.2s;
+  flex: 1; background: none; border: none; color: var(--text3);
+  font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 11px;
+  letter-spacing: 2px; text-transform: uppercase; padding: 8px 6px;
+  border-radius: 7px; cursor: pointer; transition: all 0.2s;
 }
-.cal-view-btn:first-child { border-radius: var(--radius-sm) 0 0 var(--radius-sm); }
-.cal-view-btn:last-child { border-radius: 0 var(--radius-sm) var(--radius-sm) 0; border-left: none; }
-.cal-view-btn.active { background: var(--surface3); color: var(--cyan); border-color: rgba(0,212,255,0.3); }
+.cal-view-btn.active { background: var(--purple); color: #fff; }
 
-.cal-period-nav { display: flex; align-items: center; gap: 8px; margin: 12px 16px 0; }
+.cal-period-nav { display: flex; align-items: center; gap: 8px; margin: 10px 16px 0; }
 .cal-arrow {
-  background: var(--surface2); border: 1px solid var(--border); color: var(--text3);
-  width: 32px; height: 32px; border-radius: 8px; cursor: pointer;
-  display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0;
+  background: var(--surface); border: 1px solid var(--border); color: var(--text3);
+  width: 30px; height: 30px; border-radius: 8px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; font-size: 14px;
+  box-shadow: var(--shadow);
 }
 .cal-period-title {
   flex: 1; text-align: center;
-  font-family: 'Rajdhani', sans-serif; font-weight: 600;
-  font-size: 15px; letter-spacing: 1px; text-transform: uppercase; color: var(--text);
+  font-family: 'Outfit', sans-serif; font-weight: 700;
+  font-size: 14px; letter-spacing: 0.5px; color: var(--text);
 }
 
-/* Weekly grid */
-.week-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 5px; padding: 12px 16px 6px; }
-.week-day-label { text-align: center; font-family: 'Rajdhani', sans-serif; font-size: 10px; font-weight: 600; color: var(--text3); letter-spacing: 1px; text-transform: uppercase; padding-bottom: 4px; }
+/* Calendar grids */
+.week-grid { display: grid; grid-template-columns: repeat(7,1fr); gap: 4px; padding: 10px 16px 4px; }
+.week-day-label { text-align: center; font-family: 'Outfit', sans-serif; font-size: 9px; font-weight: 700; color: var(--text3); letter-spacing: 1px; text-transform: uppercase; padding-bottom: 3px; }
 .week-day-cell {
-  aspect-ratio: 1; border-radius: 8px; background: var(--surface2);
-  border: 1px solid var(--border); display: flex; flex-direction: column;
-  align-items: center; justify-content: center; cursor: pointer; transition: all 0.15s;
+  aspect-ratio: 1; background: var(--surface); border: 1px solid var(--border);
+  border-radius: 8px; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; box-shadow: var(--shadow);
 }
-.week-day-cell.today { border-color: rgba(0,212,255,0.4); }
-.week-day-cell.has-workout { background: rgba(0,212,255,0.08); border-color: rgba(0,212,255,0.3); }
-.week-day-cell.has-workout .wd-num { color: var(--cyan); }
-.week-day-cell .wd-num { font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 14px; color: var(--text3); }
-.week-day-cell .wd-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--cyan); margin-top: 2px; opacity: 0; }
-.week-day-cell.has-workout .wd-dot { opacity: 1; }
-.week-day-cell.today .wd-num { color: var(--text); }
+.week-day-cell.today { border-color: var(--purple); }
+.week-day-cell.has-workout { background: rgba(75,53,150,0.08); border-color: rgba(75,53,150,0.3); }
+.week-day-cell.has-mobility { background: rgba(119,233,230,0.15); border-color: rgba(26,90,88,0.25); }
+.week-day-cell.has-both { background: linear-gradient(135deg,rgba(75,53,150,0.1),rgba(119,233,230,0.12)); border-color: rgba(40,117,150,0.3); }
+.wd-num { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 13px; color: var(--text3); }
+.week-day-cell.today .wd-num { color: var(--purple); }
+.week-day-cell.has-workout .wd-num { color: var(--purple); }
+.week-day-cell.has-mobility .wd-num { color: var(--aqua-text); }
+.week-day-cell.has-both .wd-num { color: var(--teal); }
+.wd-dots { display: flex; gap: 2px; margin-top: 2px; }
+.wd-dot { width: 4px; height: 4px; border-radius: 50%; }
 
-/* Monthly grid */
-.month-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; padding: 8px 16px 6px; }
+.month-grid { display: grid; grid-template-columns: repeat(7,1fr); gap: 3px; padding: 6px 16px; }
 .month-cell {
-  aspect-ratio: 1; border-radius: 7px; background: var(--surface2);
+  aspect-ratio: 1; border-radius: 7px; background: var(--surface);
   border: 1px solid transparent; display: flex; align-items: center; justify-content: center;
-  font-family: 'Rajdhani', sans-serif; font-weight: 600; font-size: 12px; color: var(--text3);
-  transition: all 0.15s;
+  font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 12px; color: var(--text3);
 }
-.month-cell.empty { background: transparent; }
-.month-cell.today { border-color: rgba(0,212,255,0.4); color: var(--text); }
-.month-cell.has-workout { background: rgba(0,212,255,0.15); border-color: rgba(0,212,255,0.3); color: var(--cyan); }
+.month-cell.empty { background: transparent; border-color: transparent; }
+.month-cell.today { border-color: var(--purple); color: var(--purple); }
+.month-cell.has-workout { background: rgba(75,53,150,0.1); border-color: rgba(75,53,150,0.25); color: var(--purple); }
+.month-cell.has-mobility { background: rgba(119,233,230,0.15); border-color: rgba(26,90,88,0.2); color: var(--aqua-text); }
+.month-cell.has-both { background: linear-gradient(135deg,rgba(75,53,150,0.1),rgba(119,233,230,0.12)); border-color: rgba(40,117,150,0.3); color: var(--teal); }
+
+/* Calendar legend */
+.cal-legend { display: flex; gap: 14px; padding: 8px 16px 4px; }
+.cal-legend-item { display: flex; align-items: center; gap: 5px; font-size: 10px; color: var(--text3); }
+.cal-legend-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
 
 /* Stats strip */
 .stats-strip { display: flex; gap: 8px; padding: 10px 16px; }
 .stat-pill {
-  flex: 1; background: var(--surface); border: 1px solid var(--border2);
-  border-radius: var(--radius-sm); padding: 11px 10px; text-align: center;
+  flex: 1; background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 11px 8px; text-align: center;
+  box-shadow: var(--shadow);
 }
-.stat-pill-num {
-  font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 22px; color: var(--cyan);
-}
-.stat-pill-label { font-size: 10px; color: var(--text3); margin-top: 2px; letter-spacing: 1px; text-transform: uppercase; }
+.stat-pill-num { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 22px; }
+.stat-pill-label { font-size: 9px; color: var(--text3); margin-top: 2px; letter-spacing: 1px; text-transform: uppercase; }
 
-/* history log list */
-.history-list-wrap { padding: 0 16px; }
+/* Charts */
+.chart-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 14px; margin: 0 16px 10px;
+  box-shadow: var(--shadow);
+}
+.chart-title {
+  font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 13px;
+  color: var(--text); margin-bottom: 2px; display: flex; align-items: center; gap: 7px;
+}
+.chart-sub { font-size: 10px; color: var(--text3); margin-bottom: 12px; }
+.bar-chart { display: flex; gap: 4px; align-items: flex-end; height: 68px; }
+.bar-col { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; }
+.bar-fill { width: 100%; border-radius: 4px 4px 0 0; min-height: 4px; }
+.bar-empty { width: 100%; border-radius: 4px 4px 0 0; background: var(--surface3); height: 4px; }
+.bar-day-label { font-size: 9px; color: var(--text3); font-family: 'Outfit', sans-serif; font-weight: 600; }
+
+/* History list */
 .history-section-label {
-  font-family: 'Rajdhani', sans-serif; font-weight: 600; font-size: 11px;
-  letter-spacing: 3px; color: var(--cyan); text-transform: uppercase;
-  padding: 12px 0 6px; border-bottom: 1px solid var(--border); margin-bottom: 8px;
+  font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 10px;
+  letter-spacing: 2.5px; color: var(--purple); text-transform: uppercase;
+  padding: 12px 16px 5px; border-bottom: 1px solid var(--border); margin: 0 16px 8px;
 }
 .history-entry {
-  background: var(--surface); border: 1px solid var(--border2);
-  border-radius: var(--radius-sm); padding: 13px; margin-bottom: 8px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 12px 13px; margin: 0 16px 8px;
   display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;
+  box-shadow: var(--shadow);
 }
 .history-entry-left { flex: 1; }
 .history-entry-name {
-  font-family: 'Rajdhani', sans-serif; font-weight: 600; font-size: 16px;
+  font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 15px;
   text-transform: uppercase; color: var(--text);
 }
-.history-entry-focus { font-size: 12px; color: var(--text2); margin-top: 2px; }
-.history-entry-time { font-size: 11px; color: var(--text3); margin-top: 4px; }
+.history-entry-focus { font-size: 11px; color: var(--text2); margin-top: 2px; }
+.history-entry-time { font-size: 10px; color: var(--text3); margin-top: 3px; }
+.history-entry-right { display: flex; flex-direction: column; align-items: flex-end; gap: 7px; flex-shrink: 0; }
 .history-badge {
-  background: rgba(0,229,160,0.1); border: 1px solid rgba(0,229,160,0.2);
-  color: var(--green); font-family: 'Rajdhani', sans-serif;
-  font-weight: 600; font-size: 11px; letter-spacing: 1px;
-  text-transform: uppercase; padding: 4px 9px; border-radius: 6px; white-space: nowrap; flex-shrink: 0;
+  background: rgba(40,117,150,0.1); border: 1px solid rgba(40,117,150,0.25);
+  color: var(--teal); font-family: 'Outfit', sans-serif;
+  font-weight: 700; font-size: 10px; letter-spacing: 1px;
+  text-transform: uppercase; padding: 3px 8px; border-radius: 6px; white-space: nowrap;
 }
-.history-entry-right { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; flex-shrink: 0; }
+.mobility-history-badge {
+  background: rgba(119,233,230,0.15); border: 1px solid rgba(26,90,88,0.2);
+  color: var(--aqua-text);
+}
 .delete-entry-btn {
-  background: none; border: 1px solid rgba(255,107,43,0.2);
-  color: var(--text3); width: 28px; height: 28px; border-radius: 7px;
+  background: none; border: 1px solid rgba(172,26,76,0.15);
+  color: var(--text3); width: 27px; height: 27px; border-radius: 7px;
   display: flex; align-items: center; justify-content: center;
-  cursor: pointer; transition: all 0.18s; flex-shrink: 0;
+  cursor: pointer; transition: all 0.18s;
 }
-.delete-entry-btn:hover, .delete-entry-btn:active {
-  background: rgba(255,107,43,0.12); border-color: rgba(255,107,43,0.4); color: var(--orange);
-}
+.delete-entry-btn:active { background: rgba(172,26,76,0.1); border-color: rgba(172,26,76,0.35); color: var(--crimson); }
+
 .history-empty {
   text-align: center; padding: 50px 20px; color: var(--text3);
-  font-family: 'Rajdhani', sans-serif; font-size: 15px;
-  letter-spacing: 2px; text-transform: uppercase; line-height: 2.2;
+  font-family: 'Outfit', sans-serif; font-size: 15px;
+  letter-spacing: 1.5px; text-transform: uppercase; line-height: 2.5;
 }
 .clear-history-btn {
-  width: 100%; background: none; border: 1px solid rgba(255,107,43,0.3);
-  color: var(--orange); font-family: 'Rajdhani', sans-serif;
-  font-weight: 600; font-size: 13px; letter-spacing: 2px; text-transform: uppercase;
-  padding: 13px; border-radius: var(--radius-sm); cursor: pointer; margin-top: 12px;
+  width: calc(100% - 32px); margin: 4px 16px 16px; background: none;
+  border: 1px solid rgba(172,26,76,0.25); color: var(--crimson);
+  font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 12px;
+  letter-spacing: 2px; text-transform: uppercase;
+  padding: 13px; border-radius: var(--radius-sm); cursor: pointer;
 }
 
 /* ── BOTTOM NAV ── */
 .bottom-nav {
   position: fixed; bottom: 0; left: 0; right: 0;
-  background: rgba(13,17,32,0.95); backdrop-filter: blur(16px);
+  background: rgba(247,245,255,0.97); backdrop-filter: blur(16px);
   border-top: 1px solid var(--border); display: flex; z-index: 200;
   padding-bottom: env(safe-area-inset-bottom, 0);
 }
 .nav-btn {
   flex: 1; background: none; border: none; color: var(--text3);
-  font-family: 'Rajdhani', sans-serif; font-weight: 600;
-  font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
-  padding: 11px 8px 15px; cursor: pointer;
+  font-family: 'Outfit', sans-serif; font-weight: 600;
+  font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
+  padding: 10px 8px 14px; cursor: pointer;
   display: flex; flex-direction: column; align-items: center; gap: 3px; transition: color 0.2s;
 }
-.nav-btn.active { color: var(--cyan); }
-.nav-btn.active .nav-icon svg { stroke: var(--cyan); }
-.nav-icon { display: flex; align-items: center; justify-content: center; width: 24px; height: 24px; }
-.nav-icon svg { width: 22px; height: 22px; stroke: var(--text3); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.2s; }
+.nav-btn.active { color: var(--purple); }
+.nav-btn.active .nav-svg { stroke: var(--purple); }
+.nav-icon-wrap { display: flex; align-items: center; justify-content: center; width: 22px; height: 22px; }
+.nav-svg { width: 20px; height: 20px; stroke: var(--text3); fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.2s; }
 
 /* ── TOAST ── */
 .toast {
-  position: fixed; bottom: 88px; left: 50%;
+  position: fixed; bottom: 86px; left: 50%;
   transform: translateX(-50%) translateY(20px);
-  background: linear-gradient(135deg, var(--cyan), var(--green));
-  color: #080b12; font-family: 'Rajdhani', sans-serif;
-  font-weight: 700; font-size: 13px; letter-spacing: 2px; text-transform: uppercase;
-  padding: 10px 22px; border-radius: 999px;
-  opacity: 0; transition: all 0.3s; z-index: 999; white-space: nowrap; pointer-events: none;
+  background: var(--purple); color: #fff;
+  font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 12px;
+  letter-spacing: 2px; text-transform: uppercase; padding: 10px 20px;
+  border-radius: 999px; opacity: 0; transition: all 0.3s;
+  z-index: 999; white-space: nowrap; pointer-events: none;
+  box-shadow: 0 4px 16px rgba(75,53,150,0.35);
 }
 .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
 /* ── CONFETTI ── */
 @keyframes confettiFall {
-  0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+  0%   { transform: translateY(-10px) rotate(0deg); opacity: 1; }
   100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
 }
 .confetti-piece { position: fixed; top: 0; animation: confettiFall linear forwards; pointer-events: none; z-index: 9999; }
@@ -528,25 +614,14 @@ body {
 
 <header class="header">
   <div class="logo-wrap">
-    <!-- Dumbbell SVG logo -->
     <svg class="logo-icon" viewBox="0 0 60 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="10" width="10" height="14" rx="3" fill="url(#g1)"/>
-      <rect x="10" y="6" width="7" height="22" rx="2.5" fill="url(#g1)"/>
-      <rect x="17" y="13" width="26" height="8" rx="3" fill="url(#g2)"/>
-      <rect x="43" y="6" width="7" height="22" rx="2.5" fill="url(#g1)"/>
-      <rect x="50" y="10" width="10" height="14" rx="3" fill="url(#g1)"/>
-      <defs>
-        <linearGradient id="g1" x1="0" y1="0" x2="60" y2="34" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#00d4ff"/>
-          <stop offset="1" stop-color="#00e5a0"/>
-        </linearGradient>
-        <linearGradient id="g2" x1="0" y1="0" x2="60" y2="0" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#00d4ff" stop-opacity="0.5"/>
-          <stop offset="1" stop-color="#00e5a0" stop-opacity="0.5"/>
-        </linearGradient>
-      </defs>
+      <rect x="0"  y="10" width="10" height="14" rx="3" fill="#4B3596"/>
+      <rect x="10" y="6"  width="7"  height="22" rx="2.5" fill="#4B3596"/>
+      <rect x="17" y="13" width="26" height="8"  rx="3" fill="#4B3596" opacity="0.4"/>
+      <rect x="43" y="6"  width="7"  height="22" rx="2.5" fill="#4B3596"/>
+      <rect x="50" y="10" width="10" height="14" rx="3" fill="#4B3596"/>
     </svg>
-    <div class="logo-text">
+    <div>
       <div class="logo-name">Jainik's Grind</div>
       <div class="logo-sub">Workout Tracker</div>
     </div>
@@ -556,16 +631,17 @@ body {
 
 <div class="toast" id="toast"></div>
 
-<!-- ══════════════════ HOME PAGE ══════════════════ -->
+<!-- ════════════════ HOME PAGE ════════════════ -->
 <div class="page active" id="page-home">
   <div class="home-top">
     <div class="home-greeting">Let's <span>Grind</span> 💪</div>
     <div class="home-sub">Pick today's workout and get moving.</div>
   </div>
   <div class="day-cards" id="dayCards"></div>
+  <div class="mobility-section" id="mobilityCardWrap"></div>
 </div>
 
-<!-- ══════════════════ WORKOUT PAGE ══════════════════ -->
+<!-- ════════════════ WORKOUT PAGE ════════════════ -->
 <div class="page" id="page-workout">
   <div class="workout-header">
     <button class="back-btn" onclick="goHome()">←</button>
@@ -575,7 +651,6 @@ body {
       <div class="workout-day-focus" id="workoutFocus"></div>
     </div>
   </div>
-
   <div class="progress-wrap">
     <div class="progress-top">
       <div class="progress-label">Progress: <span id="progressLabel">0/0</span></div>
@@ -583,43 +658,42 @@ body {
     </div>
     <div class="progress-bar-bg"><div class="progress-bar-fill" id="progressBar" style="width:0%"></div></div>
   </div>
-
   <div id="exerciseList"></div>
-
   <div class="complete-wrap">
-    <button class="complete-btn" onclick="completeWorkout()">⚡ Log Workout</button>
+    <button class="complete-btn" id="completeBtn" onclick="completeWorkout()">⚡ Log Workout</button>
   </div>
 </div>
 
-<!-- ══════════════════ HISTORY PAGE ══════════════════ -->
+<!-- ════════════════ PROGRESS PAGE ════════════════ -->
 <div class="page" id="page-history">
   <div class="page-top">
     <div class="page-title">Progress</div>
   </div>
-
   <div class="cal-nav">
-    <button class="cal-view-btn active" id="calBtnWeek" onclick="setCalView('week')">Weekly</button>
-    <button class="cal-view-btn" id="calBtnMonth" onclick="setCalView('month')">Monthly</button>
+    <button class="cal-view-btn active" id="calBtnWeek"  onclick="setCalView('week')">Weekly</button>
+    <button class="cal-view-btn"        id="calBtnMonth" onclick="setCalView('month')">Monthly</button>
   </div>
-
   <div class="cal-period-nav">
     <button class="cal-arrow" onclick="calStep(-1)">‹</button>
     <div class="cal-period-title" id="calPeriodTitle"></div>
     <button class="cal-arrow" onclick="calStep(1)">›</button>
   </div>
-
+  <div class="cal-legend">
+    <div class="cal-legend-item"><div class="cal-legend-dot" style="background:var(--purple)"></div>Workout</div>
+    <div class="cal-legend-item"><div class="cal-legend-dot" style="background:var(--aqua-text)"></div>Mobility</div>
+    <div class="cal-legend-item"><div class="cal-legend-dot" style="background:var(--teal)"></div>Both</div>
+  </div>
   <div id="calGrid"></div>
-
   <div class="stats-strip" id="statsStrip"></div>
-
-  <div class="history-list-wrap" id="historyList"></div>
+  <div id="chartsWrap"></div>
+  <div id="historyList"></div>
 </div>
 
 <!-- BOTTOM NAV -->
 <nav class="bottom-nav">
   <button class="nav-btn active" onclick="switchTab('home')" id="nav-home">
-    <span class="nav-icon">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <span class="nav-icon-wrap">
+      <svg class="nav-svg" viewBox="0 0 24 24">
         <rect x="1.5" y="9.5" width="3" height="5" rx="1"/>
         <rect x="4.5" y="7.5" width="2.5" height="9" rx="1"/>
         <line x1="7" y1="12" x2="17" y2="12"/>
@@ -629,8 +703,8 @@ body {
     </span>Home
   </button>
   <button class="nav-btn" onclick="switchTab('history')" id="nav-history">
-    <span class="nav-icon">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <span class="nav-icon-wrap">
+      <svg class="nav-svg" viewBox="0 0 24 24">
         <rect x="3" y="14" width="4" height="7" rx="1"/>
         <rect x="10" y="9" width="4" height="12" rx="1"/>
         <rect x="17" y="4" width="4" height="17" rx="1"/>
@@ -641,178 +715,168 @@ body {
 </nav>
 
 <script>
-// ══════════════ DATA ══════════════
+// ════════════════════════════════════════════
+// DATA
+// ════════════════════════════════════════════
 const DAYS = [
-  { title: "Day 1", focus: "Shoulders, Arms & Knees", color: "card-cyan", accent: "#00d4ff" },
-  { title: "Day 2", focus: "Back, Core & Hip Mobility", color: "card-orange", accent: "#ff6b2b" },
-  { title: "Day 3", focus: "Shoulders, Arms & Knees", color: "card-green", accent: "#00e5a0" },
-  { title: "Day 4", focus: "Full Body & Mobility", color: "card-purple", accent: "#a78bfa" }
+  { title:"Day 1", focus:"Shoulders, Chest, Biceps, Posterior Chain & Core", cardClass:"card-d1", accentColor:"var(--purple)", btnGradient:"linear-gradient(135deg,#4B3596,#6B55B6)" },
+  { title:"Day 2", focus:"Back, Triceps, Glutes, Calves & Core",             cardClass:"card-d2", accentColor:"var(--teal)",   btnGradient:"linear-gradient(135deg,#287596,#3A98B8)" },
+  { title:"Day 3", focus:"Shoulders, Chest, Triceps, Quads & Posterior Chain",cardClass:"card-d3", accentColor:"var(--rust)",   btnGradient:"linear-gradient(135deg,#79380B,#A05020)" },
+  { title:"Day 4", focus:"Back, Biceps, Rear Delts, Posterior Chain & Tibialis",cardClass:"card-d4",accentColor:"var(--crimson)",btnGradient:"linear-gradient(135deg,#AC1A4C,#CC3A6C)" }
 ];
-
-const DAY_STATS = [
-  { exercises: 12, mins: 45 },
-  { exercises: 11, mins: 40 },
-  { exercises: 12, mins: 45 },
-  { exercises: 8, mins: 35 }
-];
-
-// SVG muscle illustrations per day (inline, stylised anatomy)
-function getMuscleIllustration(dayIdx) {
-  const svgs = [
-    // Day 1 – Shoulders, Arms
-    `<svg viewBox="0 0 200 140" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;position:absolute;inset:0;opacity:0.55">
-      <ellipse cx="100" cy="48" rx="18" ry="22" fill="#00d4ff" opacity="0.18"/>
-      <ellipse cx="100" cy="48" rx="10" ry="13" fill="#00d4ff" opacity="0.25"/>
-      <!-- shoulders -->
-      <ellipse cx="68" cy="44" rx="16" ry="12" fill="#00d4ff" opacity="0.35"/>
-      <ellipse cx="132" cy="44" rx="16" ry="12" fill="#00d4ff" opacity="0.35"/>
-      <!-- biceps -->
-      <ellipse cx="58" cy="68" rx="9" ry="16" fill="#00d4ff" opacity="0.5"/>
-      <ellipse cx="142" cy="68" rx="9" ry="16" fill="#00d4ff" opacity="0.5"/>
-      <!-- triceps hint -->
-      <ellipse cx="57" cy="70" rx="7" ry="13" fill="#00a8cc" opacity="0.25"/>
-      <ellipse cx="143" cy="70" rx="7" ry="13" fill="#00a8cc" opacity="0.25"/>
-      <!-- knee circles -->
-      <ellipse cx="86" cy="120" rx="12" ry="12" fill="#00d4ff" opacity="0.3"/>
-      <ellipse cx="114" cy="120" rx="12" ry="12" fill="#00d4ff" opacity="0.3"/>
-      <!-- body silhouette -->
-      <rect x="84" y="66" width="32" height="42" rx="6" fill="#00d4ff" opacity="0.07"/>
-      <ellipse cx="100" cy="30" rx="14" ry="16" fill="#1a2235" opacity="0.8"/>
-    </svg>`,
-    // Day 2 – Back, Core
-    `<svg viewBox="0 0 200 140" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;position:absolute;inset:0;opacity:0.55">
-      <!-- back lats -->
-      <path d="M70 50 Q60 70 65 95 Q80 105 100 105 Q120 105 135 95 Q140 70 130 50 Q115 65 100 65 Q85 65 70 50Z" fill="#ff6b2b" opacity="0.3"/>
-      <!-- spine -->
-      <rect x="97" y="50" width="6" height="55" rx="3" fill="#ff6b2b" opacity="0.4"/>
-      <!-- traps -->
-      <ellipse cx="100" cy="48" rx="22" ry="10" fill="#ff6b2b" opacity="0.35"/>
-      <!-- core abs -->
-      <rect x="90" y="80" width="8" height="8" rx="2" fill="#ff6b2b" opacity="0.5"/>
-      <rect x="102" y="80" width="8" height="8" rx="2" fill="#ff6b2b" opacity="0.5"/>
-      <rect x="90" y="91" width="8" height="7" rx="2" fill="#ff6b2b" opacity="0.4"/>
-      <rect x="102" y="91" width="8" height="7" rx="2" fill="#ff6b2b" opacity="0.4"/>
-      <!-- hip circles -->
-      <ellipse cx="84" cy="116" rx="14" ry="10" fill="#ff6b2b" opacity="0.25"/>
-      <ellipse cx="116" cy="116" rx="14" ry="10" fill="#ff6b2b" opacity="0.25"/>
-      <ellipse cx="100" cy="30" rx="14" ry="16" fill="#1a2235" opacity="0.8"/>
-    </svg>`,
-    // Day 3 – Shoulders, Arms (green variant)
-    `<svg viewBox="0 0 200 140" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;position:absolute;inset:0;opacity:0.55">
-      <ellipse cx="100" cy="48" rx="18" ry="22" fill="#00e5a0" opacity="0.18"/>
-      <ellipse cx="100" cy="48" rx="10" ry="13" fill="#00e5a0" opacity="0.22"/>
-      <ellipse cx="68" cy="44" rx="16" ry="12" fill="#00e5a0" opacity="0.4"/>
-      <ellipse cx="132" cy="44" rx="16" ry="12" fill="#00e5a0" opacity="0.4"/>
-      <ellipse cx="58" cy="68" rx="9" ry="16" fill="#00e5a0" opacity="0.5"/>
-      <ellipse cx="142" cy="68" rx="9" ry="16" fill="#00e5a0" opacity="0.5"/>
-      <!-- calves -->
-      <ellipse cx="88" cy="125" rx="8" ry="12" fill="#00e5a0" opacity="0.35"/>
-      <ellipse cx="112" cy="125" rx="8" ry="12" fill="#00e5a0" opacity="0.35"/>
-      <!-- knee -->
-      <ellipse cx="88" cy="112" rx="10" ry="9" fill="#00e5a0" opacity="0.25"/>
-      <ellipse cx="112" cy="112" rx="10" ry="9" fill="#00e5a0" opacity="0.25"/>
-      <rect x="84" y="66" width="32" height="38" rx="6" fill="#00e5a0" opacity="0.06"/>
-      <ellipse cx="100" cy="30" rx="14" ry="16" fill="#1a2235" opacity="0.8"/>
-    </svg>`,
-    // Day 4 – Full Body
-    `<svg viewBox="0 0 200 140" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;position:absolute;inset:0;opacity:0.55">
-      <!-- full body glow -->
-      <ellipse cx="100" cy="75" rx="40" ry="60" fill="#a78bfa" opacity="0.08"/>
-      <ellipse cx="68" cy="44" rx="14" ry="10" fill="#a78bfa" opacity="0.3"/>
-      <ellipse cx="132" cy="44" rx="14" ry="10" fill="#a78bfa" opacity="0.3"/>
-      <ellipse cx="100" cy="48" rx="18" ry="20" fill="#a78bfa" opacity="0.15"/>
-      <rect x="84" y="64" width="32" height="30" rx="5" fill="#a78bfa" opacity="0.2"/>
-      <!-- hamstrings -->
-      <ellipse cx="88" cy="105" rx="10" ry="18" fill="#a78bfa" opacity="0.3"/>
-      <ellipse cx="112" cy="105" rx="10" ry="18" fill="#a78bfa" opacity="0.3"/>
-      <!-- calves -->
-      <ellipse cx="88" cy="128" rx="7" ry="10" fill="#a78bfa" opacity="0.35"/>
-      <ellipse cx="112" cy="128" rx="7" ry="10" fill="#a78bfa" opacity="0.35"/>
-      <!-- core lines -->
-      <rect x="93" y="72" width="6" height="5" rx="1.5" fill="#a78bfa" opacity="0.5"/>
-      <rect x="101" y="72" width="6" height="5" rx="1.5" fill="#a78bfa" opacity="0.5"/>
-      <rect x="93" y="80" width="6" height="5" rx="1.5" fill="#a78bfa" opacity="0.4"/>
-      <rect x="101" y="80" width="6" height="5" rx="1.5" fill="#a78bfa" opacity="0.4"/>
-      <ellipse cx="100" cy="30" rx="14" ry="16" fill="#1a2235" opacity="0.8"/>
-    </svg>`
-  ];
-  return svgs[dayIdx] || svgs[0];
-}
 
 const EXERCISES = {
   0: {
     warmup: [
-      { name: "Standing Hip Flexor Stretch", sets: 2, reps: "30 sec", url: "https://www.youtube.com/shorts/GZ5m0yXLpOY", timed: true, seconds: 30 },
-      { name: "Cat-Cow Stretch", sets: 1, reps: "10 reps", url: "https://www.youtube.com/shorts/2of247Kt0tU", timed: false },
-      { name: "Seated Knee Extensions", sets: 1, reps: "15 reps", url: "https://www.youtube.com/shorts/9Du-oWjs_lE", timed: false },
-      { name: "Glute Bridges", sets: 1, reps: "15 reps", url: "https://www.youtube.com/shorts/R6n608M3czU", timed: false },
-      { name: "Child's Pose", sets: 1, reps: "60 sec", url: "https://www.youtube.com/shorts/YAmAET3Uomk", timed: true, seconds: 60 }
+      { name:"March in place",               sets:1, reps:"60 sec", note:"Get blood flowing, light movement",        url:"https://www.youtube.com/shorts/16oJspYFz7s", timed:true,  seconds:60 },
+      { name:"Arm circles (fwd + bwd)",      sets:1, reps:"30 sec", note:"Shoulder mobility, light warm-up",        url:"https://www.youtube.com/shorts/lzR7tzI1JUI", timed:true,  seconds:30 },
+      { name:"Cat-Cow stretch",              sets:1, reps:"8 reps", note:"Spinal mobility, warm up back",           url:"https://www.youtube.com/shorts/2of247Kt0tU", timed:false },
+      { name:"Glute Bridges",               sets:1, reps:"12 reps",note:"Activates glutes/hams, offloads knee",    url:"https://www.youtube.com/shorts/R6n608M3czU", timed:false },
+      { name:"Straight Leg Raises (lying)", sets:1, reps:"8 reps", note:"Quad activation, zero knee load",         url:"https://www.youtube.com/shorts/khnALX2LAOs", timed:false }
     ],
     main: [
-      { name: "Dumbbell Lateral Raises", sets: 2, reps: "15 reps", url: "https://www.youtube.com/shorts/UFcaodmbXd8", timed: false },
-      { name: "Seated Lateral Raises", sets: 2, reps: "15 reps", url: "https://www.youtube.com/shorts/VPFrYei3dfA", timed: false },
-      { name: "Arnold Press", sets: 3, reps: "10 reps", url: "https://www.youtube.com/shorts/69z2KymlEvQ", timed: false },
-      { name: "Standing Dumbbell Curls", sets: 3, reps: "12 reps", url: "https://www.youtube.com/shorts/j1FjaWu5Am4", timed: false },
-      { name: "Overhead Dumbbell Tricep Extension", sets: 3, reps: "12 reps", url: "https://www.youtube.com/shorts/AYqg9S5FrUU", timed: false },
-      { name: "Quad Sets", sets: 2, reps: "15 reps", url: "https://www.youtube.com/shorts/VG0-roEedgU", timed: false },
-      { name: "Standing Calf Raises", sets: 3, reps: "20 reps", url: "https://www.youtube.com/shorts/Ktxf4KroFEA", timed: false }
+      { name:"DB Shoulder Press",   sets:2, reps:"10 reps",note:"Core tight, no back arch",          url:"https://www.youtube.com/shorts/wO0l5jW2NtQ", timed:false },
+      { name:"Dumbbell Floor Press",sets:2, reps:"10 reps",note:"Elbows ~45°, pause at floor",       url:"https://www.youtube.com/shorts/UBmpZ7l5Nlk", timed:false },
+      { name:"DB Bicep Curls",      sets:2, reps:"12 reps",note:"No swinging, controlled",           url:"https://www.youtube.com/shorts/MKWBV29S6c0", timed:false },
+      { name:"DB Romanian Deadlift",sets:2, reps:"10 reps",note:"Hinge at hips, soft knees",         url:"https://www.youtube.com/shorts/hu3jRvTc_po", timed:false },
+      { name:"Forearm Plank",       sets:2, reps:"30 sec", note:"Glutes squeezed, no hip sag",       url:"https://www.youtube.com/shorts/xe2MXatLTUw", timed:true,  seconds:30 }
+    ],
+    cooldown: [
+      { name:"Doorway Chest Stretch",   sets:1, reps:"30 sec",note:"Stretch chest and shoulders",       url:"https://www.youtube.com/shorts/PWGuI3rTRx0", timed:true, seconds:30 },
+      { name:"Standing Hamstring Stretch",sets:1,reps:"30 sec",note:"Relax hamstrings post-workout",    url:"https://www.youtube.com/shorts/qQ26F282VRo", timed:true, seconds:30 },
+      { name:"Overhead Tricep Stretch", sets:1, reps:"30 sec",note:"Stretch triceps and lats",          url:"https://www.youtube.com/shorts/-WFQhIRimnw", timed:true, seconds:30 }
     ]
   },
   1: {
     warmup: [
-      { name: "Standing Hip Flexor Stretch", sets: 2, reps: "30 sec", url: "https://www.youtube.com/shorts/GZ5m0yXLpOY", timed: true, seconds: 30 },
-      { name: "Cat-Cow Stretch", sets: 1, reps: "10 reps", url: "https://www.youtube.com/shorts/2of247Kt0tU", timed: false },
-      { name: "Seated Knee Extensions", sets: 1, reps: "15 reps", url: "https://www.youtube.com/shorts/9Du-oWjs_lE", timed: false },
-      { name: "Glute Bridges", sets: 1, reps: "15 reps", url: "https://www.youtube.com/shorts/R6n608M3czU", timed: false },
-      { name: "Child's Pose", sets: 1, reps: "60 sec", url: "https://www.youtube.com/shorts/YAmAET3Uomk", timed: true, seconds: 60 }
+      { name:"March in place",           sets:1, reps:"60 sec",note:"Get blood flowing, light movement",    url:"https://www.youtube.com/shorts/16oJspYFz7s", timed:true, seconds:60 },
+      { name:"Shoulder Rolls + Arm Circles",sets:1,reps:"60 sec",note:"Shoulder mobility warm-up",         url:"https://www.youtube.com/shorts/A7kgx8gGmPA", timed:true, seconds:60 },
+      { name:"Cat-Cow stretch",          sets:1, reps:"8 reps", note:"Spinal mobility, warm up back",      url:"https://www.youtube.com/shorts/2of247Kt0tU", timed:false },
+      { name:"Glute Bridges",            sets:1, reps:"12 reps",note:"Activates glutes/hams, offloads knee",url:"https://www.youtube.com/shorts/R6n608M3czU", timed:false },
+      { name:"Side-lying Leg Raises",    sets:1, reps:"10 reps",note:"Strengthens hip abductors → knee stability",url:"https://www.youtube.com/shorts/cL3jSceNZPE", timed:false }
     ],
     main: [
-      { name: "Standing Bent-Over Dumbbell Row", sets: 3, reps: "12 reps", url: "https://www.youtube.com/shorts/dpYI8K6e-jE", timed: false },
-      { name: "Standing Dumbbell Reverse Fly", sets: 2, reps: "15 reps", url: "https://www.youtube.com/shorts/xvEkgGUrGPM", timed: false },
-      { name: "Plank", sets: 2, reps: "20 sec", url: "https://www.youtube.com/shorts/Pkp3SOvipZ0", timed: true, seconds: 20 },
-      { name: "Standing Dumbbell Side Bends", sets: 3, reps: "15 reps", url: "https://www.youtube.com/shorts/44DazvtgpGE", timed: false },
-      { name: "90-90 Hip Stretch", sets: 2, reps: "30 sec", url: "https://www.youtube.com/shorts/X5jLF8JHCm8", timed: true, seconds: 30 },
-      { name: "Seated Hamstring Stretch", sets: 2, reps: "30 sec", url: "https://www.youtube.com/watch?v=u55F2jOzBVI", timed: true, seconds: 30 }
+      { name:"Bent-over DB Row (both)",      sets:2, reps:"10 reps",note:"Hinge, neutral spine, squeeze blades",   url:"https://www.youtube.com/shorts/z0rtLeSW5Cc", timed:false },
+      { name:"DB Tricep Extension (2-hand)", sets:2, reps:"12 reps",note:"Elbows close to head",                   url:"https://www.youtube.com/shorts/AYqg9S5FrUU", timed:false },
+      { name:"Dumbbell Glute Bridge",        sets:2, reps:"15 reps",note:"DB on hip crease, squeeze at top",       url:"https://www.youtube.com/shorts/iOrJXNUH3to", timed:false },
+      { name:"DB Calf Raises",               sets:2, reps:"15 reps",note:"Full stretch + full squeeze",            url:"https://www.youtube.com/shorts/OscsK8RMelQ", timed:false },
+      { name:"DB Side Bends",                sets:2, reps:"12 reps",note:"Light weight, move from obliques not arms",url:"https://www.youtube.com/shorts/kqr_IjiUuyY", timed:false }
+    ],
+    cooldown: [
+      { name:"Standing Calf Stretch",sets:1, reps:"30 sec",note:"Calf and shin stretch",              url:"https://www.youtube.com/shorts/kEsmsvaaXAo", timed:true, seconds:30 },
+      { name:"Tricep Stretch",       sets:1, reps:"30 sec",note:"Stretch triceps and lats",           url:"https://www.youtube.com/shorts/-WFQhIRimnw", timed:true, seconds:30 },
+      { name:"Seated Forward Fold",  sets:1, reps:"45 sec",note:"Hamstrings and lower back stretch",  url:"https://www.youtube.com/shorts/dtewcRYxIHs", timed:true, seconds:45 }
     ]
   },
   2: {
     warmup: [
-      { name: "Standing Hip Flexor Stretch", sets: 2, reps: "30 sec", url: "https://www.youtube.com/shorts/GZ5m0yXLpOY", timed: true, seconds: 30 },
-      { name: "Cat-Cow Stretch", sets: 1, reps: "10 reps", url: "https://www.youtube.com/shorts/2of247Kt0tU", timed: false },
-      { name: "Seated Knee Extensions", sets: 1, reps: "15 reps", url: "https://www.youtube.com/shorts/9Du-oWjs_lE", timed: false },
-      { name: "Glute Bridges", sets: 1, reps: "15 reps", url: "https://www.youtube.com/shorts/R6n608M3czU", timed: false },
-      { name: "Child's Pose", sets: 1, reps: "60 sec", url: "https://www.youtube.com/shorts/YAmAET3Uomk", timed: true, seconds: 60 }
+      { name:"March in place",   sets:1, reps:"60 sec",note:"Get blood flowing, light movement",    url:"https://www.youtube.com/shorts/16oJspYFz7s", timed:true, seconds:60 },
+      { name:"Wall Slides",      sets:1, reps:"8 reps", note:"Keep elbows bent, back against wall", url:"https://www.youtube.com/shorts/i_0zLUcE-zk", timed:false },
+      { name:"Cat-Cow stretch",  sets:1, reps:"8 reps", note:"Spinal mobility, warm up back",       url:"https://www.youtube.com/shorts/2of247Kt0tU", timed:false },
+      { name:"Glute Bridges",    sets:1, reps:"12 reps",note:"Activates glutes/hams, offloads knee",url:"https://www.youtube.com/shorts/R6n608M3czU", timed:false },
+      { name:"Quad Sets",        sets:1, reps:"10 reps",note:"Sit, leg straight, press knee down into mat",url:"https://www.youtube.com/shorts/nVuUHbBpGlw", timed:false }
     ],
     main: [
-      { name: "Wide-Grip Dumbbell Upright Row", sets: 3, reps: "12 reps", url: "https://www.youtube.com/shorts/CXSsC_-H6yo", timed: false },
-      { name: "Seated Lateral Raises", sets: 3, reps: "12 reps", url: "https://www.youtube.com/shorts/VPFrYei3dfA", timed: false },
-      { name: "Hammer Curls", sets: 3, reps: "12 reps", url: "https://www.youtube.com/shorts/kl_jpIYbKo4", timed: false },
-      { name: "Standing Dumbbell Tricep Kickbacks", sets: 3, reps: "15 reps", url: "https://www.youtube.com/shorts/3Bv1n7-DN7c", timed: false },
-      { name: "Straight Leg Raises", sets: 3, reps: "12 reps", url: "https://www.youtube.com/shorts/khnALX2LAOs", timed: false },
-      { name: "Seated Knee Extensions", sets: 3, reps: "20 reps", url: "https://www.youtube.com/shorts/9Du-oWjs_lE", timed: false },
-      { name: "Standing Calf Raises", sets: 3, reps: "20 reps", url: "https://www.youtube.com/shorts/Ktxf4KroFEA", timed: false }
+      { name:"DB Lateral Raises",   sets:2, reps:"12 reps",note:"Slight bend in elbows, lead with pinkies", url:"https://www.youtube.com/shorts/UFcaodmbXd8", timed:false },
+      { name:"DB Floor Flye",       sets:2, reps:"12 reps",note:"Slight elbow bend, controlled",            url:"https://www.youtube.com/shorts/fUWA_KAXKyQ", timed:false },
+      { name:"DB Tricep Kickbacks", sets:2, reps:"12 reps",note:"Hinge, elbow pinned, extend fully",        url:"https://www.youtube.com/shorts/3Bv1n7-DN7c", timed:false },
+      { name:"Goblet Squat to Chair",sets:1,reps:"12 reps",note:"Sit lightly to chair, do not go below parallel",url:"https://www.youtube.com/watch?v=xxUok-bsgpQ", timed:false },
+      { name:"Superman",            sets:2, reps:"10 reps",note:"Hold 2 sec at top, controlled movement",   url:"https://www.youtube.com/shorts/KTWWh3GsyYw", timed:false }
+    ],
+    cooldown: [
+      { name:"Doorway Chest Stretch",   sets:1,reps:"30 sec",note:"Stretch chest and shoulders",     url:"https://www.youtube.com/shorts/PWGuI3rTRx0", timed:true, seconds:30 },
+      { name:"Standing Quad Stretch",   sets:1,reps:"30 sec",note:"Quad and hip flexor stretch",     url:"https://www.youtube.com/shorts/aNXGOpP37CY", timed:true, seconds:30 },
+      { name:"Lying Figure-4 Stretch",  sets:1,reps:"30 sec",note:"Hip and glute stretch, gentle pressure",url:"https://www.youtube.com/shorts/4CqSgEx5q_g", timed:true, seconds:30 }
     ]
   },
   3: {
     warmup: [
-      { name: "Standing Hip Flexor Stretch", sets: 2, reps: "30 sec", url: "https://www.youtube.com/shorts/GZ5m0yXLpOY", timed: true, seconds: 30 },
-      { name: "Cat-Cow Stretch", sets: 1, reps: "10 reps", url: "https://www.youtube.com/shorts/2of247Kt0tU", timed: false },
-      { name: "Seated Knee Extensions", sets: 1, reps: "15 reps", url: "https://www.youtube.com/shorts/9Du-oWjs_lE", timed: false },
-      { name: "Glute Bridges", sets: 1, reps: "15 reps", url: "https://www.youtube.com/shorts/R6n608M3czU", timed: false },
-      { name: "Child's Pose", sets: 1, reps: "60 sec", url: "https://www.youtube.com/shorts/YAmAET3Uomk", timed: true, seconds: 60 }
+      { name:"March in place",          sets:1, reps:"60 sec",note:"Get blood flowing, light movement",    url:"https://www.youtube.com/shorts/16oJspYFz7s", timed:true, seconds:60 },
+      { name:"Arm Circles + Shoulder Rolls",sets:1,reps:"60 sec",note:"Shoulder mobility warm-up",        url:"https://www.youtube.com/shorts/A7kgx8gGmPA", timed:true, seconds:60 },
+      { name:"Cat-Cow stretch",         sets:1, reps:"8 reps", note:"Spinal mobility, warm up back",      url:"https://www.youtube.com/shorts/2of247Kt0tU", timed:false },
+      { name:"Glute Bridges",           sets:1, reps:"12 reps",note:"Activates glutes/hams, offloads knee",url:"https://www.youtube.com/shorts/R6n608M3czU", timed:false },
+      { name:"Heel Slides",             sets:1, reps:"10 reps",note:"Lying on back, slide heel toward butt and back",url:"https://www.youtube.com/shorts/hZtpmrt1Ve4", timed:false }
     ],
     main: [
-      { name: "Dumbbell Romanian Deadlift", sets: 3, reps: "12 reps", url: "https://www.youtube.com/shorts/fW8-0VV13w4", timed: false },
-      { name: "Dumbbell Floor Squeeze Press", sets: 3, reps: "12 reps", url: "https://www.youtube.com/watch?v=AMrygffh_dQ", timed: false },
-      { name: "Standing Bent-Over Dumbbell Row", sets: 3, reps: "12 reps", url: "https://www.youtube.com/shorts/dpYI8K6e-jE", timed: false }
+      { name:"Bent-over DB Row (both)", sets:2, reps:"10 reps",note:"Hinge, neutral spine, squeeze blades",  url:"https://www.youtube.com/shorts/z0rtLeSW5Cc", timed:false },
+      { name:"DB Hammer Curls",         sets:2, reps:"12 reps",note:"Palms facing in, targets biceps + forearms",url:"https://www.youtube.com/shorts/kl_jpIYbKo4", timed:false },
+      { name:"DB Reverse Flye (hinged)",sets:2, reps:"12 reps",note:"Light weight, squeeze shoulder blades", url:"https://www.youtube.com/shorts/xvEkgGUrGPM", timed:false },
+      { name:"DB Romanian Deadlift",    sets:2, reps:"10 reps",note:"Hinge at hips, soft knees",             url:"https://www.youtube.com/shorts/hu3jRvTc_po", timed:false },
+      { name:"Heel Walks (tibialis)",   sets:2, reps:"30 sec", note:"Walk on heels with toes up high",       url:"https://www.youtube.com/shorts/h4V7X5ZDnU0", timed:true, seconds:30 }
+    ],
+    cooldown: [
+      { name:"Standing Hamstring Stretch",        sets:1,reps:"30 sec",note:"Relax hamstrings post-workout",  url:"https://www.youtube.com/shorts/qQ26F282VRo", timed:true, seconds:30 },
+      { name:"Chest Opener (clasped hands)",      sets:1,reps:"30 sec",note:"Chest and shoulder stretch",     url:"https://www.youtube.com/shorts/2kx8BdPtONY", timed:true, seconds:30 },
+      { name:"Lying Spinal Twist",                sets:1,reps:"30 sec",note:"Spine and oblique stretch",      url:"https://www.youtube.com/shorts/ElKoMMaTPCM", timed:true, seconds:30 }
+    ]
+  },
+  mob: {
+    main: [
+      { name:"Full-body Bedtime Yoga", sets:1, reps:"20 mins",note:"Reduce stress, tension in the body", url:"https://www.youtube.com/watch?v=v7SN-d4qXx0", timed:false },
+      { name:"Quick 5 min stretch",    sets:1, reps:"5 mins", note:"Back, hips and shoulder",            url:"https://www.youtube.com/watch?v=DTPooiWWlos", timed:false },
+      { name:"Shoulder & Neck Stretch",sets:1, reps:"7 mins", note:"Shoulders and neck",                 url:"https://www.youtube.com/watch?v=xRndYV-iL1E", timed:false }
     ]
   }
 };
 
-// ══════════════ STATE ══════════════
-let currentDay = 0;
+// Muscle SVG illustrations per day
+function getMuscleIllustration(dayIdx) {
+  const fills = ['rgba(75,53,150,0.3)','rgba(40,117,150,0.3)','rgba(121,56,11,0.3)','rgba(172,26,76,0.3)'];
+  const f = fills[dayIdx];
+  const svgs = [
+    `<svg viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="38" cy="35" rx="14" ry="10" fill="${f}"/>
+      <ellipse cx="82" cy="35" rx="14" ry="10" fill="${f}"/>
+      <ellipse cx="26" cy="55" rx="9" ry="16" fill="${f}"/>
+      <ellipse cx="94" cy="55" rx="9" ry="16" fill="${f}"/>
+      <rect x="44" y="48" width="32" height="30" rx="5" fill="${f}" opacity="0.6"/>
+      <ellipse cx="60" cy="25" rx="11" ry="13" fill="rgba(238,234,255,0.9)"/>
+    </svg>`,
+    `<svg viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M32 32 Q24 48 27 70 Q40 80 60 80 Q80 80 93 70 Q96 48 88 32 Q74 44 60 44 Q46 44 32 32Z" fill="${f}"/>
+      <rect x="57" y="32" width="6" height="45" rx="3" fill="${f}"/>
+      <rect x="45" y="55" width="8" height="7" rx="2" fill="${f}"/>
+      <rect x="67" y="55" width="8" height="7" rx="2" fill="${f}"/>
+      <ellipse cx="60" cy="24" rx="11" ry="13" fill="rgba(238,234,255,0.9)"/>
+    </svg>`,
+    `<svg viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="38" cy="35" rx="14" ry="10" fill="${f}"/>
+      <ellipse cx="82" cy="35" rx="14" ry="10" fill="${f}"/>
+      <ellipse cx="26" cy="55" rx="9" ry="16" fill="${f}"/>
+      <ellipse cx="94" cy="55" rx="9" ry="16" fill="${f}"/>
+      <ellipse cx="46" cy="95" rx="10" ry="18" fill="${f}"/>
+      <ellipse cx="74" cy="95" rx="10" ry="18" fill="${f}"/>
+      <ellipse cx="60" cy="25" rx="11" ry="13" fill="rgba(238,234,255,0.9)"/>
+    </svg>`,
+    `<svg viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="60" cy="72" rx="36" ry="52" fill="${f}" opacity="0.5"/>
+      <ellipse cx="38" cy="35" rx="12" ry="9" fill="${f}"/>
+      <ellipse cx="82" cy="35" rx="12" ry="9" fill="${f}"/>
+      <ellipse cx="46" cy="92" rx="9" ry="16" fill="${f}"/>
+      <ellipse cx="74" cy="92" rx="9" ry="16" fill="${f}"/>
+      <ellipse cx="60" cy="25" rx="11" ry="13" fill="rgba(238,234,255,0.9)"/>
+    </svg>`
+  ];
+  return svgs[dayIdx];
+}
+
+// ════════════════════════════════════════════
+// STATE
+// ════════════════════════════════════════════
+let currentDay = null; // 0-3 or 'mob'
 let state = {};
-let timers = {}; // timers[exIdx] = { interval, remaining, total, running }
+let timers = {};
+
+function getExList(day) {
+  if (day === 'mob') {
+    return EXERCISES.mob.main.map(e => ({...e, type:'mob'}));
+  }
+  return [
+    ...EXERCISES[day].warmup.map(e => ({...e, type:'warmup'})),
+    ...EXERCISES[day].main.map(e =>   ({...e, type:'main'})),
+    ...EXERCISES[day].cooldown.map(e =>({...e, type:'cool'}))
+  ];
+}
 
 function initState(day) {
   if (state[day]) return;
@@ -820,50 +884,72 @@ function initState(day) {
   getExList(day).forEach((ex, i) => {
     state[day][i] = {
       done: false,
-      sets: Array.from({ length: ex.sets }, () => ({ reps: ex.reps, done: false }))
+      sets: Array.from({length: ex.sets}, () => ({reps: ex.reps, done: false}))
     };
   });
 }
 
-function getExList(day) {
-  return [
-    ...EXERCISES[day].warmup.map(e => ({ ...e, type: 'warmup' })),
-    ...EXERCISES[day].main.map(e => ({ ...e, type: 'main' }))
-  ];
-}
-
-// ══════════════ HOME CARDS ══════════════
+// ════════════════════════════════════════════
+// HOME CARDS
+// ════════════════════════════════════════════
 function buildHomeCards() {
   const wrap = document.getElementById('dayCards');
-  wrap.innerHTML = DAYS.map((d, i) => {
-    const st = DAY_STATS[i];
-    const totalEx = EXERCISES[i].warmup.length + EXERCISES[i].main.length;
-    return `
-    <div class="day-card ${d.color}" onclick="openDay(${i})">
-      <div class="day-card-bg">${getMuscleIllustration(i)}</div>
-      <div class="day-card-overlay"></div>
-      <div class="day-card-content">
-        <div class="day-card-badge">${d.title}</div>
-        <div class="day-card-title">${d.focus}</div>
-        <div class="day-card-meta">
-          <div class="day-card-stat">🏋️ <span>${totalEx}</span> exercises</div>
-          <div class="day-card-stat">⏱ <span>~${st.mins} min</span></div>
+  const exCounts = [0,1,2,3].map(d => EXERCISES[d].warmup.length + EXERCISES[d].main.length + EXERCISES[d].cooldown.length);
+  wrap.innerHTML = DAYS.map((d,i) => `
+    <div class="day-card ${d.cardClass}" onclick="openDay(${i})">
+      <div class="card-illustration">${getMuscleIllustration(i)}</div>
+      <div class="card-content">
+        <div class="card-badge">${d.title}</div>
+        <div class="card-title">${d.focus}</div>
+        <div class="card-meta">
+          <div class="card-stat"><strong>${exCounts[i]}</strong> exercises</div>
         </div>
       </div>
-      <div class="day-card-arrow">→</div>
+      <div class="card-arrow">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="${d.accentColor}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+    </div>
+  `).join('');
+
+  // Mobility card
+  document.getElementById('mobilityCardWrap').innerHTML = `
+    <div class="mobility-card" onclick="openDay('mob')">
+      <div class="mobility-card-header">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--aqua-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div class="mobility-card-title">Daily Mobility</div>
+      </div>
+      <div class="mobility-card-sub">Complete 1 exercise to mark the day done</div>
+      <div class="mob-pills">
+        <div class="mob-pill">🧘 Bedtime Yoga · 20 min</div>
+        <div class="mob-pill">🤸 Quick Stretch · 5 min</div>
+        <div class="mob-pill">💆 Shoulder & Neck · 7 min</div>
+      </div>
+      <div class="mobility-arrow">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="var(--aqua-text)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
     </div>`;
-  }).join('');
 }
 
-// ══════════════ WORKOUT ══════════════
+// ════════════════════════════════════════════
+// OPEN DAY / WORKOUT
+// ════════════════════════════════════════════
 function openDay(dayIdx) {
   currentDay = dayIdx;
   initState(dayIdx);
-  const d = DAYS[dayIdx];
-  document.getElementById('workoutTitle').textContent = d.title;
-  document.getElementById('workoutFocus').textContent = d.focus;
-  document.getElementById('workoutFocus').style.color = d.accent;
   timers = {};
+
+  const isMob = dayIdx === 'mob';
+  const title = isMob ? 'Mobility' : DAYS[dayIdx].title;
+  const focus  = isMob ? 'Daily Mobility Exercises' : DAYS[dayIdx].focus;
+  const accent = isMob ? 'var(--aqua-text)' : DAYS[dayIdx].accentColor;
+  const btnGrad= isMob ? 'linear-gradient(135deg,#1a5a58,#287596)' : DAYS[dayIdx].btnGradient;
+
+  document.getElementById('workoutTitle').textContent = title;
+  document.getElementById('workoutFocus').textContent = focus;
+  document.getElementById('workoutFocus').style.color = accent;
+  document.getElementById('progressBar').style.background = isMob ? 'linear-gradient(90deg,var(--aqua-text),var(--teal))' : DAYS[dayIdx].btnGradient;
+  document.getElementById('completeBtn').style.background = btnGrad;
+
   renderWorkout();
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.getElementById('page-workout').classList.add('active');
@@ -871,39 +957,51 @@ function openDay(dayIdx) {
 }
 
 function goHome() {
-  // stop all timers
-  Object.values(timers).forEach(t => { if (t.interval) clearInterval(t.interval); });
+  Object.values(timers).forEach(t => { if(t.interval) clearInterval(t.interval); });
   timers = {};
   switchTab('home');
 }
 
+// ════════════════════════════════════════════
+// RENDER WORKOUT
+// ════════════════════════════════════════════
 function renderWorkout() {
   const exList = document.getElementById('exerciseList');
   exList.innerHTML = '';
-  const all = getExList(currentDay);
-  const wc = EXERCISES[currentDay].warmup.length;
 
-  const wLabel = document.createElement('div');
-  wLabel.className = 'section-label warmup';
-  wLabel.innerHTML = '🔥 Warm-Up <div class="section-line"></div>';
-  exList.appendChild(wLabel);
+  if (currentDay === 'mob') {
+    exList.appendChild(makeSectionLabel('mob-section','🧘 Choose Your Mobility Exercise'));
+    const wrap = document.createElement('div'); wrap.className = 'exercises';
+    EXERCISES.mob.main.forEach((ex, i) => wrap.appendChild(buildCard(i, {...ex, type:'mob'})));
+    exList.appendChild(wrap);
+  } else {
+    const wc = EXERCISES[currentDay].warmup.length;
+    const mc = EXERCISES[currentDay].main.length;
+    const all = getExList(currentDay);
 
-  const wWrap = document.createElement('div');
-  wWrap.className = 'exercises';
-  for (let i = 0; i < wc; i++) wWrap.appendChild(buildCard(i, all[i]));
-  exList.appendChild(wWrap);
+    exList.appendChild(makeSectionLabel('warmup','🔥 Warm-Up'));
+    const wWrap = document.createElement('div'); wWrap.className = 'exercises';
+    for (let i = 0; i < wc; i++) wWrap.appendChild(buildCard(i, all[i]));
+    exList.appendChild(wWrap);
 
-  const mLabel = document.createElement('div');
-  mLabel.className = 'section-label main';
-  mLabel.innerHTML = '💪 Main Workout <div class="section-line"></div>';
-  exList.appendChild(mLabel);
+    exList.appendChild(makeSectionLabel('main','💪 Main Workout'));
+    const mWrap = document.createElement('div'); mWrap.className = 'exercises';
+    for (let i = wc; i < wc+mc; i++) mWrap.appendChild(buildCard(i, all[i]));
+    exList.appendChild(mWrap);
 
-  const mWrap = document.createElement('div');
-  mWrap.className = 'exercises';
-  for (let i = wc; i < all.length; i++) mWrap.appendChild(buildCard(i, all[i]));
-  exList.appendChild(mWrap);
-
+    exList.appendChild(makeSectionLabel('cool','❄️ Cool Down'));
+    const cWrap = document.createElement('div'); cWrap.className = 'exercises';
+    for (let i = wc+mc; i < all.length; i++) cWrap.appendChild(buildCard(i, all[i]));
+    exList.appendChild(cWrap);
+  }
   updateProgress();
+}
+
+function makeSectionLabel(cls, text) {
+  const div = document.createElement('div');
+  div.className = `section-label ${cls}`;
+  div.innerHTML = `${text} <div class="section-line"></div>`;
+  return div;
 }
 
 function buildCard(idx, ex) {
@@ -913,38 +1011,41 @@ function buildCard(idx, ex) {
   card.id = `ex-${idx}`;
 
   const timerHTML = ex.timed ? `
-    <button class="timer-btn" id="tbtn-${idx}" onclick="toggleTimer(${idx}, ${ex.seconds})">
-      ⏱ Start ${ex.reps} Timer
-    </button>
+    <button class="timer-btn" id="tbtn-${idx}" onclick="toggleTimer(${idx},${ex.seconds})">⏱ ${ex.reps} Timer</button>
     <div class="timer-display" id="tdisp-${idx}">
-      <div class="timer-time running" id="ttime-${idx}">${fmtTime(ex.seconds)}</div>
+      <div class="timer-time" id="ttime-${idx}">${fmtTime(ex.seconds)}</div>
       <div class="timer-label" id="tlabel-${idx}">Ready</div>
       <div class="timer-controls">
         <button class="t-ctrl-btn t-start" id="tstartbtn-${idx}" onclick="startTimer(${idx})">Start</button>
-        <button class="t-ctrl-btn t-reset" onclick="resetTimer(${idx}, ${ex.seconds})">Reset</button>
+        <button class="t-ctrl-btn t-reset" onclick="resetTimer(${idx},${ex.seconds})">Reset</button>
       </div>
+      <div class="timer-sound-note">🔔 Start & end sounds</div>
     </div>` : '';
 
   card.innerHTML = `
     <div class="ex-header" onclick="toggleExpand(${idx})">
-      <button class="ex-check" onclick="event.stopPropagation(); toggleDone(${idx})">
-        <span class="checkmark">✓</span>
+      <button class="ex-check" onclick="event.stopPropagation();toggleDone(${idx})">
+        ${s.done ? '✓' : ''}
       </button>
       <div class="ex-info">
         <div class="ex-name">${ex.name}</div>
-        <div class="ex-meta">${ex.sets} set${ex.sets > 1 ? 's' : ''} · ${ex.reps}${ex.timed ? ' ⏱' : ''}</div>
+        <div class="ex-meta-row">
+          <span class="ex-meta">${ex.sets} set${ex.sets>1?'s':''} · ${ex.reps}</span>
+          ${ex.timed ? '<span class="timed-badge">⏱ Timed</span>' : ''}
+        </div>
       </div>
       <div class="ex-actions">
         <a class="yt-btn" href="${ex.url}" target="_blank" onclick="event.stopPropagation()" title="Watch tutorial">▶</a>
         <div class="expand-icon">⌄</div>
       </div>
     </div>
+    ${ex.note ? `<div class="ex-note"><span class="ex-note-icon">💡</span><span class="ex-note-text">${ex.note}</span></div>` : ''}
     <div class="sets-panel">
       <div class="sets-label">Log Your Sets</div>
       <div class="sets-grid" id="sets-${idx}"></div>
       ${timerHTML}
-    </div>
-  `;
+    </div>`;
+
   renderSets(idx, card);
   return card;
 }
@@ -956,99 +1057,127 @@ function renderSets(exIdx, cardEl) {
   const s = state[currentDay][exIdx];
   container.innerHTML = s.sets.map((set, si) => `
     <div class="set-item${set.done ? ' completed' : ''}" id="set-${exIdx}-${si}">
-      <div class="set-num">Set ${si + 1}</div>
+      <div class="set-num">Set ${si+1}</div>
       <input class="reps-input" type="text" value="${set.reps}" oninput="saveReps(${exIdx},${si},this.value)" inputmode="text">
       <button class="set-done-btn" onclick="toggleSetDone(${exIdx},${si})">${set.done ? '✓ Done' : 'Done'}</button>
-    </div>
-  `).join('');
+    </div>`).join('');
 }
 
 function updateProgress() {
   const total = getExList(currentDay).length;
-  const done = Object.values(state[currentDay]).filter(s => s.done).length;
-  const pct = total > 0 ? (done / total) * 100 : 0;
-  document.getElementById('progressBar').style.width = pct + '%';
+  const done  = Object.values(state[currentDay]).filter(s => s.done).length;
+  const pct   = total > 0 ? (done/total)*100 : 0;
+  document.getElementById('progressBar').style.width  = pct + '%';
   document.getElementById('progressLabel').textContent = `${done}/${total}`;
 }
 
-function toggleExpand(idx) {
-  document.getElementById(`ex-${idx}`).classList.toggle('expanded');
-}
+// ════════════════════════════════════════════
+// INTERACTIONS
+// ════════════════════════════════════════════
+function toggleExpand(idx) { document.getElementById(`ex-${idx}`).classList.toggle('expanded'); }
+
 function toggleDone(idx) {
   state[currentDay][idx].done = !state[currentDay][idx].done;
-  document.getElementById(`ex-${idx}`).classList.toggle('done', state[currentDay][idx].done);
+  const card = document.getElementById(`ex-${idx}`);
+  card.classList.toggle('done', state[currentDay][idx].done);
+  const check = card.querySelector('.ex-check');
+  check.textContent = state[currentDay][idx].done ? '✓' : '';
   updateProgress();
 }
+
 function toggleSetDone(exIdx, setIdx) {
   const set = state[currentDay][exIdx].sets[setIdx];
   set.done = !set.done;
   renderSets(exIdx);
-  if (state[currentDay][exIdx].sets.every(s => s.done) && !state[currentDay][exIdx].done) {
+  // 1 set done = exercise complete
+  const anyDone = state[currentDay][exIdx].sets.some(s => s.done);
+  if (anyDone && !state[currentDay][exIdx].done) {
     state[currentDay][exIdx].done = true;
-    document.getElementById(`ex-${exIdx}`).classList.add('done');
+    const card = document.getElementById(`ex-${exIdx}`);
+    card.classList.add('done');
+    card.querySelector('.ex-check').textContent = '✓';
     updateProgress();
-    showToast('Set complete! 🔥');
+    showToast('Exercise complete! 🎉');
+  }
+  if (!anyDone && state[currentDay][exIdx].done) {
+    state[currentDay][exIdx].done = false;
+    const card = document.getElementById(`ex-${exIdx}`);
+    card.classList.remove('done');
+    card.querySelector('.ex-check').textContent = '';
+    updateProgress();
   }
 }
-function saveReps(exIdx, setIdx, val) {
-  state[currentDay][exIdx].sets[setIdx].reps = val;
-}
+
+function saveReps(exIdx, setIdx, val) { state[currentDay][exIdx].sets[setIdx].reps = val; }
+
 function resetDay() {
   if (!confirm('Reset all exercises for this day?')) return;
-  Object.values(timers).forEach(t => { if (t.interval) clearInterval(t.interval); });
+  Object.values(timers).forEach(t => { if(t.interval) clearInterval(t.interval); });
   timers = {};
   state[currentDay] = null;
   initState(currentDay);
   renderWorkout();
 }
+
 function completeWorkout() {
-  const dayInfo = DAYS[currentDay];
+  const isMob = currentDay === 'mob';
   const all = getExList(currentDay);
   const history = JSON.parse(localStorage.getItem('grind_history') || '[]');
   history.unshift({
     date: new Date().toISOString(),
+    type: isMob ? 'mobility' : 'workout',
     dayIdx: currentDay,
-    dayTitle: dayInfo.title,
-    focus: dayInfo.focus,
-    exercises: all.map((ex, i) => ({
-      name: ex.name, type: ex.type,
-      done: state[currentDay][i].done
-    }))
+    dayTitle: isMob ? 'Mobility' : DAYS[currentDay].title,
+    focus: isMob ? 'Daily Mobility' : DAYS[currentDay].focus,
+    exercises: all.map((ex,i) => ({ name:ex.name, done:state[currentDay][i].done }))
   });
   localStorage.setItem('grind_history', JSON.stringify(history));
-  showToast('⚡ Workout Logged!');
+  showToast('⚡ Logged!');
   launchConfetti();
-  setTimeout(() => goHome(), 800);
+  setTimeout(() => goHome(), 700);
 }
 
-// ══════════════ TIMER ══════════════
+// ════════════════════════════════════════════
+// TIMER
+// ════════════════════════════════════════════
 function fmtTime(sec) {
-  const m = Math.floor(sec / 60), s = sec % 60;
-  return `${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+  return `${String(Math.floor(sec/60)).padStart(2,'0')}:${String(sec%60).padStart(2,'0')}`;
+}
+
+// Simple beep via Web Audio API
+function beep(freq, dur, vol=0.3) {
+  try {
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.connect(gain); gain.connect(ctx.destination);
+    osc.frequency.value = freq; osc.type = 'sine';
+    gain.gain.setValueAtTime(vol, ctx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + dur);
+    osc.start(); osc.stop(ctx.currentTime + dur);
+  } catch(e) {}
 }
 
 function toggleTimer(idx, totalSec) {
   const disp = document.getElementById(`tdisp-${idx}`);
-  const btn = document.getElementById(`tbtn-${idx}`);
-  const isVisible = disp.classList.contains('visible');
-  if (!isVisible) {
+  const btn  = document.getElementById(`tbtn-${idx}`);
+  if (!disp.classList.contains('visible')) {
     disp.classList.add('visible');
     btn.classList.add('active');
     btn.textContent = '✕ Close Timer';
-    if (!timers[idx]) timers[idx] = { interval: null, remaining: totalSec, total: totalSec, running: false };
+    if (!timers[idx]) timers[idx] = { interval:null, remaining:totalSec, total:totalSec, running:false };
     updateTimerDisplay(idx);
   } else {
     if (timers[idx]?.interval) clearInterval(timers[idx].interval);
     if (timers[idx]) timers[idx].running = false;
     disp.classList.remove('visible');
     btn.classList.remove('active');
-    btn.textContent = `⏱ Start ${fmtTime(totalSec)} Timer`;
+    btn.textContent = `⏱ ${fmtTime(totalSec)} Timer`;
   }
 }
 
 function startTimer(idx) {
-  const t = timers[idx];
-  if (!t) return;
+  const t = timers[idx]; if (!t) return;
   if (t.running) {
     clearInterval(t.interval); t.running = false;
     document.getElementById(`tstartbtn-${idx}`).textContent = 'Resume';
@@ -1056,6 +1185,7 @@ function startTimer(idx) {
     return;
   }
   if (t.remaining <= 0) return;
+  beep(660, 0.15); // start sound
   t.running = true;
   document.getElementById(`tstartbtn-${idx}`).textContent = 'Pause';
   document.getElementById(`tstartbtn-${idx}`).className = 't-ctrl-btn t-pause';
@@ -1064,7 +1194,8 @@ function startTimer(idx) {
     updateTimerDisplay(idx);
     if (t.remaining <= 0) {
       clearInterval(t.interval); t.running = false;
-      document.getElementById(`tstartbtn-${idx}`).textContent = 'Done!';
+      beep(880, 0.2); setTimeout(() => beep(880,0.2), 250); // end double beep
+      document.getElementById(`tstartbtn-${idx}`).textContent = 'Done ✓';
       document.getElementById(`tstartbtn-${idx}`).className = 't-ctrl-btn t-reset';
       showToast('Timer done! ✅');
     }
@@ -1072,156 +1203,189 @@ function startTimer(idx) {
 }
 
 function resetTimer(idx, totalSec) {
-  const t = timers[idx];
-  if (!t) return;
-  clearInterval(t.interval); t.running = false;
-  t.remaining = totalSec;
+  const t = timers[idx]; if (!t) return;
+  clearInterval(t.interval); t.running = false; t.remaining = totalSec;
   updateTimerDisplay(idx);
   document.getElementById(`tstartbtn-${idx}`).textContent = 'Start';
   document.getElementById(`tstartbtn-${idx}`).className = 't-ctrl-btn t-start';
 }
 
 function updateTimerDisplay(idx) {
-  const t = timers[idx];
-  if (!t) return;
-  const el = document.getElementById(`ttime-${idx}`);
+  const t = timers[idx]; if (!t) return;
+  const el  = document.getElementById(`ttime-${idx}`);
   const lbl = document.getElementById(`tlabel-${idx}`);
   if (!el) return;
   el.textContent = fmtTime(t.remaining);
   el.className = 'timer-time';
-  if (t.remaining <= 0) {
-    el.classList.add('done-t'); lbl.textContent = 'Complete! ✅';
-  } else if (t.remaining <= 5) {
-    el.classList.add('warning'); lbl.textContent = 'Almost there…';
-  } else if (t.running) {
-    el.classList.add('running'); lbl.textContent = 'Running…';
-  } else {
-    el.classList.add('running'); lbl.textContent = 'Ready';
-  }
+  if (t.remaining <= 0)       { el.classList.add('done-t');  lbl.textContent = 'Complete ✓'; }
+  else if (t.remaining <= 5)  { el.classList.add('warning'); lbl.textContent = 'Almost there…'; }
+  else                        { lbl.textContent = t.running ? 'Running…' : 'Ready'; }
 }
 
-// ══════════════ HISTORY / CALENDAR ══════════════
-let calView = 'week';
-let calOffset = 0;
+// ════════════════════════════════════════════
+// HISTORY / CALENDAR
+// ════════════════════════════════════════════
+let calView = 'week', calOffset = 0;
 
 function setCalView(v) {
   calView = v; calOffset = 0;
-  document.getElementById('calBtnWeek').classList.toggle('active', v === 'week');
-  document.getElementById('calBtnMonth').classList.toggle('active', v === 'month');
+  document.getElementById('calBtnWeek').classList.toggle('active',  v==='week');
+  document.getElementById('calBtnMonth').classList.toggle('active', v==='month');
   renderCalendar();
 }
-function calStep(dir) { calOffset += dir; renderCalendar(); }
+function calStep(d) { calOffset += d; renderCalendar(); }
 
-function getWorkoutDates() {
+function getHistoryDates() {
   const h = JSON.parse(localStorage.getItem('grind_history') || '[]');
-  return new Set(h.map(e => e.date.slice(0, 10)));
+  const workout  = new Set();
+  const mobility = new Set();
+  h.forEach(e => {
+    const d = e.date.slice(0,10);
+    if (e.type === 'mobility') mobility.add(d);
+    else workout.add(d);
+  });
+  return { workout, mobility };
 }
 
 function renderCalendar() {
-  const workoutDates = getWorkoutDates();
+  const { workout, mobility } = getHistoryDates();
   const today = new Date();
+  const todayStr = today.toISOString().slice(0,10);
 
   if (calView === 'week') {
-    // Find Monday of current+offset week
     const monday = new Date(today);
-    const dow = (today.getDay() + 6) % 7; // 0=Mon
-    monday.setDate(today.getDate() - dow + calOffset * 7);
-
-    const weekDays = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
-    let headerHTML = '<div class="week-grid">' + weekDays.map(d => `<div class="week-day-label">${d}</div>`).join('');
-    for (let i = 0; i < 7; i++) {
-      const d = new Date(monday); d.setDate(monday.getDate() + i);
-      const ds = d.toISOString().slice(0, 10);
-      const isToday = ds === today.toISOString().slice(0, 10);
-      const hasW = workoutDates.has(ds);
-      headerHTML += `<div class="week-day-cell${isToday ? ' today' : ''}${hasW ? ' has-workout' : ''}">
-        <div class="wd-num">${d.getDate()}</div>
-        <div class="wd-dot"></div>
-      </div>`;
-    }
-    headerHTML += '</div>';
-    document.getElementById('calGrid').innerHTML = headerHTML;
-
-    const start = monday.toLocaleDateString('en-IN', { day: 'numeric', month: 'short' });
-    const end = new Date(monday); end.setDate(monday.getDate() + 6);
-    const endStr = end.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
-    document.getElementById('calPeriodTitle').textContent = `${start} – ${endStr}`;
-
-    // Stats for this week
-    let wCount = 0;
-    for (let i = 0; i < 7; i++) {
-      const d = new Date(monday); d.setDate(monday.getDate() + i);
-      if (workoutDates.has(d.toISOString().slice(0, 10))) wCount++;
-    }
-    renderStats(wCount, 7, 'This Week');
-
-  } else {
-    // Monthly
-    const base = new Date(today.getFullYear(), today.getMonth() + calOffset, 1);
-    const year = base.getFullYear(), month = base.getMonth();
-    const daysInMonth = new Date(year, month + 1, 0).getDate();
-    const firstDow = (new Date(year, month, 1).getDay() + 6) % 7; // 0=Mon
-
-    const weekDays = ['M','T','W','T','F','S','S'];
-    let html = '<div class="month-grid">' + weekDays.map(d => `<div class="month-cell empty" style="font-size:10px;color:var(--text3);letter-spacing:1px;">${d}</div>`).join('');
-    for (let i = 0; i < firstDow; i++) html += `<div class="month-cell empty"></div>`;
-    for (let d = 1; d <= daysInMonth; d++) {
-      const ds = `${year}-${String(month+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
-      const isToday = ds === today.toISOString().slice(0,10);
-      const hasW = workoutDates.has(ds);
-      html += `<div class="month-cell${isToday ? ' today' : ''}${hasW ? ' has-workout' : ''}">${d}</div>`;
+    const dow = (today.getDay()+6)%7;
+    monday.setDate(today.getDate() - dow + calOffset*7);
+    const days = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+    let html = '<div class="week-grid">' + days.map(d=>`<div class="week-day-label">${d}</div>`).join('');
+    for (let i=0; i<7; i++) {
+      const d = new Date(monday); d.setDate(monday.getDate()+i);
+      const ds = d.toISOString().slice(0,10);
+      const w = workout.has(ds), m = mobility.has(ds), isT = ds===todayStr;
+      const cls = [w&&m?'has-both':w?'has-workout':m?'has-mobility':'', isT?'today':''].join(' ');
+      const dotW = w ? `<div class="wd-dot" style="background:var(--purple)"></div>` : '';
+      const dotM = m ? `<div class="wd-dot" style="background:var(--aqua-text)"></div>` : '';
+      html += `<div class="week-day-cell ${cls}"><div class="wd-num">${d.getDate()}</div><div class="wd-dots">${dotW}${dotM}</div></div>`;
     }
     html += '</div>';
     document.getElementById('calGrid').innerHTML = html;
-    document.getElementById('calPeriodTitle').textContent = base.toLocaleDateString('en-IN', { month: 'long', year: 'numeric' });
 
-    let mCount = 0;
-    for (let d = 1; d <= daysInMonth; d++) {
-      const ds = `${year}-${String(month+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
-      if (workoutDates.has(ds)) mCount++;
+    const endDay = new Date(monday); endDay.setDate(monday.getDate()+6);
+    document.getElementById('calPeriodTitle').textContent =
+      monday.toLocaleDateString('en-IN',{day:'numeric',month:'short'}) + ' – ' +
+      endDay.toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'});
+
+    let wCount=0, mCount=0;
+    for(let i=0;i<7;i++){const d=new Date(monday);d.setDate(monday.getDate()+i);const ds=d.toISOString().slice(0,10);if(workout.has(ds))wCount++;if(mobility.has(ds))mCount++;}
+    renderStatsAndCharts(wCount,mCount,7,'week',monday);
+  } else {
+    const base = new Date(today.getFullYear(), today.getMonth()+calOffset, 1);
+    const yr=base.getFullYear(), mo=base.getMonth();
+    const daysInMonth = new Date(yr,mo+1,0).getDate();
+    const firstDow = (new Date(yr,mo,1).getDay()+6)%7;
+    const dl = ['M','T','W','T','F','S','S'];
+    let html = '<div class="month-grid">'+dl.map(d=>`<div class="month-cell" style="font-size:9px;font-weight:700;color:var(--text3);background:transparent;">${d}</div>`).join('');
+    for(let i=0;i<firstDow;i++) html+='<div class="month-cell empty"></div>';
+    for(let d=1;d<=daysInMonth;d++){
+      const ds=`${yr}-${String(mo+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+      const w=workout.has(ds),m=mobility.has(ds),isT=ds===todayStr;
+      const cls=[w&&m?'has-both':w?'has-workout':m?'has-mobility':'',isT?'today':''].join(' ');
+      html+=`<div class="month-cell ${cls}">${d}</div>`;
     }
-    renderStats(mCount, daysInMonth, 'This Month');
+    html+='</div>';
+    document.getElementById('calGrid').innerHTML=html;
+    document.getElementById('calPeriodTitle').textContent=base.toLocaleDateString('en-IN',{month:'long',year:'numeric'});
+
+    let wCount=0,mCount=0;
+    for(let d=1;d<=daysInMonth;d++){const ds=`${yr}-${String(mo+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;if(workout.has(ds))wCount++;if(mobility.has(ds))mCount++;}
+    renderStatsAndCharts(wCount,mCount,daysInMonth,'month',base);
   }
 }
 
-function renderStats(count, total, label) {
-  const history = JSON.parse(localStorage.getItem('grind_history') || '[]');
+function renderStatsAndCharts(wCount, mCount, total, viewType, baseDate) {
   document.getElementById('statsStrip').innerHTML = `
-    <div class="stat-pill"><div class="stat-pill-num">${count}</div><div class="stat-pill-label">Days Active</div></div>
-    <div class="stat-pill"><div class="stat-pill-num">${total - count}</div><div class="stat-pill-label">Days Missed</div></div>
-    <div class="stat-pill"><div class="stat-pill-num">${history.length}</div><div class="stat-pill-label">Total Logged</div></div>
-  `;
-}
+    <div class="stat-pill"><div class="stat-pill-num" style="color:var(--purple)">${wCount}</div><div class="stat-pill-label">Workouts</div></div>
+    <div class="stat-pill"><div class="stat-pill-num" style="color:var(--aqua-text)">${mCount}</div><div class="stat-pill-label">Mobility</div></div>
+    <div class="stat-pill"><div class="stat-pill-num" style="color:var(--teal)">${total-wCount}</div><div class="stat-pill-label">Missed</div></div>`;
 
-function deleteHistoryEntry(idx) {
-  const history = JSON.parse(localStorage.getItem('grind_history') || '[]');
-  history.splice(idx, 1);
-  localStorage.setItem('grind_history', JSON.stringify(history));
-  renderCalendar();
-  renderHistoryList();
+  // Build bar chart data (last 7 days for week, all weeks of month for month)
+  const { workout, mobility } = getHistoryDates();
+  let wBars=[], mBars=[], labels=[];
+
+  if (viewType === 'week') {
+    for(let i=0;i<7;i++){
+      const d=new Date(baseDate); d.setDate(baseDate.getDate()+i);
+      const ds=d.toISOString().slice(0,10);
+      wBars.push(workout.has(ds)?1:0);
+      mBars.push(mobility.has(ds)?1:0);
+      labels.push(['M','T','W','T','F','S','S'][i]);
+    }
+  } else {
+    // Weeks of the month
+    const yr=baseDate.getFullYear(), mo=baseDate.getMonth();
+    const daysInMonth=new Date(yr,mo+1,0).getDate();
+    const weeks=Math.ceil(daysInMonth/7);
+    for(let w=0;w<weeks;w++){
+      let wHas=false,mHas=false;
+      for(let d=w*7+1;d<=Math.min((w+1)*7,daysInMonth);d++){
+        const ds=`${yr}-${String(mo+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+        if(workout.has(ds))wHas=true;
+        if(mobility.has(ds))mHas=true;
+      }
+      wBars.push(wHas?1:0); mBars.push(mHas?1:0);
+      labels.push(`W${w+1}`);
+    }
+  }
+
+  const maxW = Math.max(...wBars,1), maxM = Math.max(...mBars,1);
+
+  function buildBars(data, max, color, emptyColor) {
+    return data.map((v,i) => {
+      const pct = v > 0 ? Math.max(20, (v/max)*100) : 0;
+      return `<div class="bar-col">
+        ${v > 0
+          ? `<div class="bar-fill" style="height:${pct}%;background:${color};"></div>`
+          : `<div class="bar-empty"></div>`}
+        <div class="bar-day-label" style="color:${v>0?'var(--text2)':'var(--text3)'}">${labels[i]}</div>
+      </div>`;
+    }).join('');
+  }
+
+  document.getElementById('chartsWrap').innerHTML = `
+    <div class="chart-card">
+      <div class="chart-title"><div style="width:9px;height:9px;border-radius:50%;background:var(--purple);flex-shrink:0;"></div>Workout Days</div>
+      <div class="chart-sub">Days completed this ${viewType}</div>
+      <div class="bar-chart">${buildBars(wBars,maxW,'linear-gradient(180deg,var(--purple),#7B65C6)','')}</div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title"><div style="width:9px;height:9px;border-radius:50%;background:var(--aqua-text);flex-shrink:0;"></div>Mobility Days</div>
+      <div class="chart-sub">1 exercise = day complete</div>
+      <div class="bar-chart">${buildBars(mBars,maxM,'linear-gradient(180deg,var(--aqua-text),var(--teal))','')}</div>
+    </div>`;
 }
 
 function renderHistoryList() {
   const history = JSON.parse(localStorage.getItem('grind_history') || '[]');
   const container = document.getElementById('historyList');
   if (history.length === 0) {
-    container.innerHTML = '<div class="history-empty">No workouts logged yet.<br>Start grinding! ⚡</div>';
+    container.innerHTML = '<div class="history-empty">No workouts logged yet.<br>Start grinding! 💪</div>';
     return;
   }
   const groups = {};
-  history.forEach((entry, globalIdx) => {
+  history.forEach((entry, gi) => {
     const d = new Date(entry.date);
-    const key = d.toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'long' });
+    const key = d.toLocaleDateString('en-IN',{weekday:'long',day:'numeric',month:'long'});
     if (!groups[key]) groups[key] = [];
-    groups[key].push({ ...entry, _d: d, _idx: globalIdx });
+    groups[key].push({...entry, _d:d, _idx:gi});
   });
   let html = '';
   Object.entries(groups).forEach(([date, entries]) => {
     html += `<div class="history-section-label">${date}</div>`;
     entries.forEach(entry => {
-      const doneMain = entry.exercises.filter(e => e.done && e.type === 'main').length;
-      const totalMain = entry.exercises.filter(e => e.type === 'main').length;
-      const time = entry._d.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit' });
+      const done = entry.exercises.filter(e=>e.done).length;
+      const total = entry.exercises.length;
+      const time = entry._d.toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit'});
+      const isMob = entry.type === 'mobility';
       html += `<div class="history-entry">
         <div class="history-entry-left">
           <div class="history-entry-name">${entry.dayTitle}</div>
@@ -1229,10 +1393,11 @@ function renderHistoryList() {
           <div class="history-entry-time">${time}</div>
         </div>
         <div class="history-entry-right">
-          <div class="history-badge">${doneMain}/${totalMain}</div>
-          <button class="delete-entry-btn" onclick="deleteHistoryEntry(${entry._idx})" title="Delete entry">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/>
+          <div class="history-badge ${isMob?'mobility-history-badge':''}">${done}/${total}</div>
+          <button class="delete-entry-btn" onclick="deleteEntry(${entry._idx})" title="Delete">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/>
+              <path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/>
             </svg>
           </button>
         </div>
@@ -1243,34 +1408,41 @@ function renderHistoryList() {
   container.innerHTML = html;
 }
 
+function deleteEntry(idx) {
+  const history = JSON.parse(localStorage.getItem('grind_history') || '[]');
+  history.splice(idx, 1);
+  localStorage.setItem('grind_history', JSON.stringify(history));
+  renderCalendar(); renderHistoryList();
+}
+
 function clearHistory() {
   if (confirm('Clear all workout history? This cannot be undone.')) {
     localStorage.removeItem('grind_history');
-    renderCalendar();
-    renderHistoryList();
+    renderCalendar(); renderHistoryList();
   }
 }
 
-// ══════════════ NAV ══════════════
+// ════════════════════════════════════════════
+// NAV
+// ════════════════════════════════════════════
 function switchTab(tab) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
   document.getElementById(`page-${tab}`).classList.add('active');
-  const navBtn = document.getElementById(`nav-${tab}`);
-  if (navBtn) navBtn.classList.add('active');
+  const nb = document.getElementById(`nav-${tab}`);
+  if (nb) nb.classList.add('active');
   if (tab === 'history') { renderCalendar(); renderHistoryList(); }
 }
 
 function showToast(msg) {
   const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.classList.add('show');
+  t.textContent = msg; t.classList.add('show');
   setTimeout(() => t.classList.remove('show'), 2200);
 }
 
 function launchConfetti() {
-  const colors = ['#00d4ff','#ff6b2b','#00e5a0','#a78bfa','#ffffff','#ffdd57'];
-  for (let i = 0; i < 70; i++) {
+  const colors = ['#4B3596','#287596','#AC1A4C','#AD6D15','#79380B','#77E9E6','#ffffff'];
+  for (let i=0; i<65; i++) {
     const el = document.createElement('div');
     el.className = 'confetti-piece';
     el.style.cssText = `left:${Math.random()*100}vw;background:${colors[Math.floor(Math.random()*colors.length)]};border-radius:${Math.random()>0.5?'50%':'2px'};animation-duration:${1.2+Math.random()*2}s;animation-delay:${Math.random()*0.6}s;width:${6+Math.random()*8}px;height:${6+Math.random()*8}px;`;
@@ -1279,27 +1451,23 @@ function launchConfetti() {
   }
 }
 
-// ══════════════ INIT ══════════════
+// ════════════════════════════════════════════
+// INIT
+// ════════════════════════════════════════════
 function init() {
   const now = new Date();
   document.getElementById('headerDate').textContent =
-    now.toLocaleDateString('en-IN', { weekday: 'short', day: 'numeric', month: 'short' });
+    now.toLocaleDateString('en-IN',{weekday:'short',day:'numeric',month:'short'});
   buildHomeCards();
+
+  if ('serviceWorker' in navigator) {
+    const swCode = `self.addEventListener('install',e=>self.skipWaiting());self.addEventListener('activate',e=>self.clients.claim());self.addEventListener('fetch',e=>e.respondWith(fetch(e.request).catch(()=>caches.match(e.request))));`;
+    const swBlob = new Blob([swCode],{type:'application/javascript'});
+    navigator.serviceWorker.register(URL.createObjectURL(swBlob),{scope:'/'}).catch(()=>{});
+  }
 }
 
 init();
-
-// ══════════════ PWA SERVICE WORKER ══════════════
-if ('serviceWorker' in navigator) {
-  const swCode = `
-    self.addEventListener('install', e => self.skipWaiting());
-    self.addEventListener('activate', e => self.clients.claim());
-    self.addEventListener('fetch', e => e.respondWith(fetch(e.request).catch(() => caches.match(e.request))));
-  `;
-  const swBlob = new Blob([swCode], {type: 'application/javascript'});
-  const swURL = URL.createObjectURL(swBlob);
-  navigator.serviceWorker.register(swURL, {scope: '/'}).catch(() => {});
-}
 </script>
 </body>
 </html>
